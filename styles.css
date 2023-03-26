@@ -30,17 +30,20 @@ header {
   .header-image {
     display: inline-block;
     width: 200px;
-    height: 200px; /* adjust the height to your preference */
-    margin-right: 2.5rem; /* add some space between the image and the name */
-    border-radius: 50%; /* make the image circular */
-    overflow: hidden; /* hide any part of the image that goes beyond the border */
+    height: 200px;
+    margin-right: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
     vertical-align: middle;
-  }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #d1d5da; /* Add a border similar to GitHub buttons */
+    background-color: #fff; /* Add a background color for the border */
+}
 
   .header-image img {
     height: 100%;
     width: 100%;
-    object-fit: cover; /* add this line to center the image in the circle */
+    object-fit: cover; 
   }
   
   .header-text {
@@ -69,6 +72,7 @@ h3 {
     margin-bottom: 0.8rem;
     border-bottom: 2px solid #3498db;
     padding-bottom: 0.5rem;
+    text-shadow: 0 0 1px #3498db, 0 0 2px #3498db;
 }
 
 h4 {
@@ -249,3 +253,4 @@ body.dark a {
         margin-bottom: 0.5rem;
     }
 }
+
