@@ -16,6 +16,14 @@ body {
     padding: 1rem;
 }
 
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 header {
     position: relative;
     text-align: right;
@@ -25,48 +33,56 @@ header {
     background-color: #34495e;
     color: #fff;
     padding: 2.5rem;
-  }
-  
-  .header-image {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-image {
     display: inline-block;
     width: 200px;
     height: 200px;
-    margin-right: 2.5rem;
+    
     border-radius: 50%;
     overflow: hidden;
     vertical-align: middle;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border: 1px solid #d1d5da; /* Add a border similar to GitHub buttons */
-    background-color: #fff; /* Add a background color for the border */
+    border: 1px solid #d1d5da;
+    /* Add a border similar to GitHub buttons */
+    background-color: #fff;
+    /* Add a background color for the border */
 }
 
-  .header-image img {
+.header-image img {
     height: 100%;
     width: 100%;
-    object-fit: cover; 
-  }
-  
-  .header-text {
+    object-fit: cover;
+}
+
+.header-text {
     display: inline-block;
     vertical-align: middle;
-  }
-  
-  h1 {
-    font-size: 2rem; /* adjust the font-size to your preference */
+}
+
+h1 {
+    font-size: 2rem;
+    /* adjust the font-size to your preference */
     margin-bottom: 0.3rem;
     display: block;
-  }
-  
-  h2 {
+}
+
+h2 {
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
     display: block;
-  }
-  
-  
+}
+
+
 
 h3 {
+    font-size: 1.4rem;
+    /* Increase font size */
+    font-weight: 800;
+    /* Change font weight */
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.8rem;
@@ -79,6 +95,16 @@ h4 {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
+    padding: 5px;
+    /* Add some padding */
+    background-color: #f1f1f1;
+    /* Add a lighter background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add a subtle box shadow */
+    padding: 0.2rem 0.8rem;
+    /* Add padding to the left and right */
+    border-radius: 3px;
+    /* Add border-radius for a smoother appearance */
 }
 
 section {
@@ -86,7 +112,7 @@ section {
     background-color: #fff;
     border-radius: 5px;
     padding: 2.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 p {
@@ -178,14 +204,26 @@ body.dark {
 
 body.dark header {
     background-color: #393e46;
+    border: 1px solid black;
 }
 
 body.dark section {
     background-color: #393e46;
+    border: 1px solid black;
+    
 }
 
 body.dark h3 {
     border-bottom: 2px solid #00adb5;
+}
+
+body.dark h4 {
+    background-color: #4f4f4f;
+    /* Change the background color for dark mode */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Increase the shadow for better visibility in dark mode */
+    padding: 0.2rem 0.8rem;
+    /* Add padding to the left and right */
 }
 
 body.dark a {
@@ -253,4 +291,3 @@ body.dark a {
         margin-bottom: 0.5rem;
     }
 }
-
