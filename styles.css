@@ -125,6 +125,32 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+section:nth-of-type(odd) {
+    animation: slide-from-left 1s ease-in-out;
+  }
+  
+  section:nth-of-type(even) {
+    animation: slide-from-right 1s ease-in-out;
+  }
+  
+  @keyframes slide-from-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slide-from-right {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
 p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
