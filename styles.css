@@ -14,6 +14,13 @@ body {
     /* Increase the maximum width */
     margin: 0 auto;
     padding: 1rem;
+
+    /* background image*/
+    background-image: url('/public/cloud-g2e6b67838_1920.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 .header-content {
@@ -33,7 +40,12 @@ header {
     background-color: #34495e;
     color: #fff;
     padding: 2.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
+
+    opacity: 0.9; /* adjust this value to increase or decrease transparency */
+
+    /* glowing effect on header */
+    box-shadow: 0 0 10px 4px #00bfff;
+
     animation: drop-down 1s ease-in-out;
 }
 
