@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyndon Simpson - Développeur Web</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -17,11 +18,12 @@
                 <img src="public/unnamed Cropped.jpg" alt="profile picture">
             </div>
             <div class="header-text">
-                <h1>Lyndon Simpson</h1>
-                <h2>Développeur web et web mobile</h2>
+                <h1 data-translate="header_title">Lyndon Simpson</h1>
+                <h2 data-translate="header_subtitle">Développeur web et web mobile</h2>
                 <p>Back-end, javascript, node.js, SQL, HTML5, css</p>
             </div>
         </div>
+        <button id="lang-toggle">FR / EN</button>
     </header>
 
     <section id="contact">
@@ -48,25 +50,25 @@
 
 
     <section id="education">
-        <h3>Education</h3>
-        <h4>O’clock, Paris — Certification Web développeur niveau 5 (bac +2)</h4>
-        <p>Juin 2022 à Novembre 2022 - Titre professionnel obtenu en février 2023</p>
-        <h4>ICP, Paris — Diplôme de Lettres-modernes (licence bac +3)</h4>
-        <p>Diplôme obtenu en 2017 - Faculté de Poitiers</p>
+        <h3 data-translate="education_title">Formation</h3>
+        <h4 data-translate="o_clock_title">O’clock, Paris — Certification Web développeur niveau 5 (bac +2)</h4>
+        <p data-translate="o_clock_date">Juin 2022 à Novembre 2022 - Titre professionnel obtenu en février 2023</p>
+        <h4 data-translate="icp_title">ICP, Paris — Diplôme de Lettres-modernes (licence bac +3)</h4>
+        <p data-translate="icp_date">Diplôme obtenu en 2017 - Faculté de Poitiers</p>
     </section>
 
     <section id="skills">
-        <h3>Compétences</h3>
+        <h3 data-translate="skills_title">Compétences</h3>
         <ul>
-            <li><i class="fas fa-code"></i> Langages : HTML, CSS, Javascript, SQL</li>
-            <li><i class="fas fa-cogs"></i> Technos : NodeJs, PostgreSQL, Express</li>
-            <li><i class="fas fa-language"></i> Langues : Anglais avancé</li>
-            <li><i class="fas fa-lightbulb"></i> Soft skills : Autonome, polyvalent et passionné d’apprentissage</li>
+            <li><i class="fas fa-code"></i> <span data-translate="skills_lang">Langages : HTML, CSS, Javascript, SQL</span></li>
+            <li><i class="fas fa-cogs"></i> <span data-translate="skills_techno">Technos : NodeJs, PostgreSQL, Express</span></li>
+            <li><i class="fas fa-language"></i> <span data-translate="skills_languages">Langues : Anglais avancé</span></li>
+            <li><i class="fas fa-lightbulb"></i> <span data-translate="skills_soft">Soft skills : Autonome, polyvalent et passionné d’apprentissage</span></li>
         </ul>
     </section>
 
     <section id="work-experience">
-        <h3>Expériences</h3>
+        <h3 data-translate="experience_title">Expériences</h3>
         <div class="job">
             <h4>Mhumain, Teletravail — Lead dev back, gitmaster
                 Octobre - Novembre 2022
@@ -95,19 +97,19 @@
     </section>
 
     <section id="projects">
-        <h3>Projets</h3>
+        <h3 data-translate="projects_title">Projets</h3>
         <div class="project">
-            <h4>Mhumain, Teletravail — Lead dev back, gitmaster
+            <h4 data-translate="project1_title">Mhumain, Teletravail — Lead dev back, gitmaster
                 Octobre - Novembre 2022
                 Projet professionnel</h4>
             <a href="https://github.com/LyndonSimpson/Projet-Apoth-ose-O-clock-Mhumain/tree/main/API"
-                target="_blank">Repo Github</a>
+                target="_blank"> <span data-translate="project1_repo">Repo Github</span></a>
         </div>
         <div class="project">
-            <h4>Projet API journal intime dynamique</h4>
-            <p>Projet personnel qui immite un journal intime mais en le rendant dynamique et proposant une manipulation
+            <h4 data-translate="project2_title">Projet API journal intime dynamique</h4>
+            <p data-translate="project2_description">Projet personnel qui immite un journal intime mais en le rendant dynamique et proposant une manipulation
                 des données qui permet de naviguer à travers les souvenirs de façon plus intuitive</p>
-            <a href="en cours de réalisation!" target="_blank">Projet en construction</a>
+            <a href="en cours de réalisation!" target="_blank"> <span data-translate="project2_status"></span>Projet en construction</a>
         </div>
     </section>
 
@@ -116,7 +118,8 @@
         <span class="slider round"></span>
     </label>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
+
 
 </body>
 

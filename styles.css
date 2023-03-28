@@ -3,10 +3,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} 
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 1.6;
     color: #444;
     background-color: #f7f7f7;
@@ -34,7 +34,17 @@ header {
     color: #fff;
     padding: 2.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: drop-down 1s ease-in-out;
 }
+
+@keyframes drop-down {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
 
 .header-image {
     display: inline-block;
@@ -137,6 +147,13 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Hover effect for sections and header with accentuated shadows */
+section:hover,
+header:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
 }
 
 /* Contact section */
