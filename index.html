@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyndon Simpson - Développeur Web</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+
+    <div id="background-1" class="background"></div>
+    <div id="background-2" class="background"></div>
+
     <header id="main-header">
         <div class="header-content">
             <div class="header-image">
@@ -25,6 +30,10 @@
         </div>
         <button id="lang-toggle">FR / EN</button>
     </header>
+
+    <section class="typewriter-container">
+        <pre id="typewriter-text"></pre>
+      </section>
 
     <section id="contact">
         <h3>Contact</h3>
@@ -48,7 +57,6 @@
         </ul>
     </section>
 
-
     <section id="education">
         <h3 data-translate="education_title">Formation</h3>
         <h4 data-translate="o_clock_title">O’clock, Paris — Certification Web développeur niveau 5 (bac +2)</h4>
@@ -60,39 +68,51 @@
     <section id="skills">
         <h3 data-translate="skills_title">Compétences</h3>
         <ul>
-            <li><i class="fas fa-code"></i> <span data-translate="skills_lang">Langages : HTML, CSS, Javascript, SQL</span></li>
-            <li><i class="fas fa-cogs"></i> <span data-translate="skills_techno">Technos : NodeJs, PostgreSQL, Express</span></li>
-            <li><i class="fas fa-language"></i> <span data-translate="skills_languages">Langues : Anglais avancé</span></li>
-            <li><i class="fas fa-lightbulb"></i> <span data-translate="skills_soft">Soft skills : Autonome, polyvalent et passionné d’apprentissage</span></li>
+            <li><i class="fas fa-code"></i> <span data-translate="skills_lang">Langages : HTML, CSS, Javascript,
+                    SQL</span></li>
+            <li><i class="fas fa-cogs"></i> <span data-translate="skills_techno">Technos : NodeJs, PostgreSQL,
+                    Express</span></li>
+            <li><i class="fas fa-language"></i> <span data-translate="skills_languages">Langues : Anglais avancé</span>
+            </li>
+            <li><i class="fas fa-lightbulb"></i> <span data-translate="skills_soft">Soft skills : Autonome, polyvalent
+                    et passionné d’apprentissage</span></li>
         </ul>
     </section>
 
     <section id="work-experience">
         <h3 data-translate="experience_title">Expériences</h3>
         <div class="job">
-            <h4>Mhumain, Teletravail — Lead dev back, gitmaster
+            <h4 data-translate="experience1_title">Mhumain, Teletravail — Lead dev back, gitmaster
                 Octobre - Novembre 2022
                 Projet professionnel</h4>
-            <p> ● <strong>Réalisation de la partie back-end :</strong> Base de données, API, documentation,
-                JSdoc, sécurité, inscription et connexion, récupération de mot de passe,
-                système de messagerie interne <br>
-                ● <strong>Méthode AGILE :</strong> utilisation d’un kanban (github projects) et rendez-vous
-                quotidiens pour des bilans en équipe <br>
-                ● <strong>Gestion du gitflow :</strong> pull requests, gestion des conflits de
-                branches</p>
+                <p> 
+                    <span data-translate="backend_realization"> Réalisation de la partie back-end :</span> 
+                    <span data-translate="backend_realization_details">Base de données, API, documentation,
+                                  JSdoc, sécurité, inscription et connexion, récupération de mot de passe,
+                                  système de messagerie interne</span>
+                    <br>
+                    <span data-translate="agile_method"> Méthode AGILE :</span> 
+                    <span data-translate="agile_method_details">utilisation d’un kanban (github projects) et rendez-vous
+                                  quotidiens pour des bilans en équipe</span>
+                    <br>
+                    <span data-translate="gitflow_management"> Gestion du gitflow :</span> 
+                    <span data-translate="gitflow_management_details">pull requests, gestion des conflits de
+                                  branches</span>
+                  </p>
+                  
             <a href="https://github.com/LyndonSimpson/Projet-Apoth-ose-O-clock-Mhumain/tree/main/API"
-                target="_blank">Repo Github</a>
+                target="_blank"> <span data-translate="github">Repo Github</span></a>
         </div>
         <div class="job">
-            <h4>Responsable de magasin</h4>
-            <p>Vegami, 64 rue notre-dame de Nazareth, Paris - 2019-2021</p>
+            <h4 data-translate="experience2_title">Responsable de magasin</h4>
+            <p data-translate="experience2_adress">Vegami, 64 rue notre-dame de Nazareth, Paris - 2019-2021</p>
             <ul>
-                <li> ● Gestion de l'équipe</li>
-                <li> ● Gestion des stocks et D.L.C.</li>
-                <li> ● Conseils personnalisés auprès de la clientèle</li>
-                <li> ● Gestion de la boutique parisienne</li>
-                <li> ● Gestion des réseaux sociaux et création de contenu</li>
-            </ul>
+                <li data-translate="team_management">  Gestion de l'équipe</li>
+                <li data-translate="stock_management">  Gestion des stocks et D.L.C.</li>
+                <li data-translate="customer_advice">  Conseils personnalisés auprès de la clientèle</li>
+                <li data-translate="store_management">  Gestion de la boutique parisienne</li>
+                <li data-translate="social_media_management">  Gestion des réseaux sociaux et création de contenu</li>
+              </ul>              
         </div>
     </section>
 
@@ -102,14 +122,16 @@
             <h4 data-translate="project1_title">Mhumain, Teletravail — Lead dev back, gitmaster
                 Octobre - Novembre 2022
                 Projet professionnel</h4>
-            <a href="https://github.com/LyndonSimpson/Projet-Apoth-ose-O-clock-Mhumain/tree/main/API"
-                target="_blank"> <span data-translate="project1_repo">Repo Github</span></a>
+            <a href="https://github.com/LyndonSimpson/Projet-Apoth-ose-O-clock-Mhumain/tree/main/API" target="_blank">
+                <span data-translate="project1_repo">Repo Github</span></a>
         </div>
         <div class="project">
             <h4 data-translate="project2_title">Projet API journal intime dynamique</h4>
-            <p data-translate="project2_description">Projet personnel qui immite un journal intime mais en le rendant dynamique et proposant une manipulation
+            <p data-translate="project2_description">Projet personnel qui immite un journal intime mais en le rendant
+                dynamique et proposant une manipulation
                 des données qui permet de naviguer à travers les souvenirs de façon plus intuitive</p>
-            <a href="en cours de réalisation!" target="_blank"> <span data-translate="project2_status"></span>Projet en construction</a>
+            <a href="en cours de réalisation!" target="_blank"> <span data-translate="project2_status">Projet en
+                construction</span></a>
         </div>
     </section>
 

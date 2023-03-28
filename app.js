@@ -3,6 +3,8 @@ import translations from './translations.js';
 document.addEventListener('DOMContentLoaded', function () {
   const langToggle = document.getElementById('lang-toggle');
   const themeToggle = document.getElementById('theme-toggle');
+  const background1 = document.getElementById('background-1');
+  const background2 = document.getElementById('background-2');
   const body = document.body;
   let currentLang = 'fr';
 
@@ -40,11 +42,54 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add an event listener for scrolling
   window.addEventListener('scroll', function () {
     if (window.scrollY > window.innerHeight / 2) {
-      body.classList.add('second-background');
+      background1.style.opacity = 0;
+      background2.style.opacity = 1;
     } else {
-      body.classList.remove('second-background');
+      background1.style.opacity = 1;
+      background2.style.opacity = 0;
     }
   });
+
+  // Typewriter effect
+  const codeText = `class Developer {
+    constructor(name, role, skills, 
+                location) {
+      this.name = name;
+      this.role = role;
+      this.skills = skills;
+      this.location = location;
+    }
+  
+    introduce() {
+      console.log(\`Hi, I'm \${this.name},
+       a \${this.role}
+        located in \${this.location}. 
+        My skills include
+         \${this.skills.join(', ')}.\`);
+    }
+  }
+  
+  const lyndon = new Developer(
+    'Lyndon', 
+    'Full Stack Developer', 
+    ['JavaScript', 'HTML', 'CSS'], 
+    'Paris');
+
+  lyndon.introduce();`;
+
+  const typewriterText = document.getElementById('typewriter-text');
+  let currentIndex = 0;
+
+  function typeWriter() {
+    if (currentIndex < codeText.length) {
+      typewriterText.innerHTML += codeText.charAt(currentIndex);
+      currentIndex++;
+      setTimeout(typeWriter, 25);
+    }
+  }
+
+  typeWriter();
 });
+
 
 
