@@ -21,7 +21,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  transition: background 2s ease-in-out;
 }
+
+body.second-background {
+    background-image: url('public/programming-g5fee15e74_1920.png');
+  }
 
 .header-content {
     display: flex;

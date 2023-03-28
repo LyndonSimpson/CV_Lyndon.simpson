@@ -36,5 +36,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // Set the initial translations and button label
   updateTranslations();
   updateButtonLabel();
+
+  // Add an event listener for scrolling
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > window.innerHeight / 2) {
+      body.classList.add('second-background');
+    } else {
+      body.classList.remove('second-background');
+    }
+  });
 });
+
 
