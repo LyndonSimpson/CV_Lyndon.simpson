@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentIndex < codeText.length) {
       typewriterText.innerHTML += codeText.charAt(currentIndex);
       currentIndex++;
-      setTimeout(typeWriter, 25);
+      setTimeout(typeWriter, 20);
     }
   }
 
