@@ -28,7 +28,7 @@
                 <p>Back-end, javascript, node.js, SQL, HTML5, css</p>
             </div>
         </div>
-        <button id="lang-toggle">FR / EN</button>
+        
     </header>
 
     <section class="typewriter-container">
@@ -135,10 +135,16 @@
         </div>
     </section>
 
-    <label class="switch" id="theme-toggle">
-        <input type="checkbox">
-        <span class="slider round"></span>
-    </label>
+    <div id="toggle-container">
+        <button id="lang-toggle">
+            <span class="lang-en">EN</span>
+            <span class="lang-fr">FR</span>
+          </button>          
+    <button id="theme-toggle">
+        <span class="light-mode-icon"><i class="fas fa-moon"></i></span>
+        <span class="dark-mode-icon"><i class="fas fa-sun"></i></span>
+      </button>  
+    </div>    
 
     <script type="module" src="app.js"></script>
 

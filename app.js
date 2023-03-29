@@ -18,17 +18,23 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateButtonLabel() {
+    const lightModeIcon = document.querySelector('.light-mode-icon');
+    const darkModeIcon = document.querySelector('.dark-mode-icon');
+  
     if (body.classList.contains('dark')) {
-      themeToggle.textContent = 'Mode Clair';
+      lightModeIcon.style.opacity = '0';
+      darkModeIcon.style.opacity = '1';
     } else {
-      themeToggle.textContent = 'Mode Dark';
+      lightModeIcon.style.opacity = '1';
+      darkModeIcon.style.opacity = '0';
     }
   }
 
   langToggle.addEventListener('click', function () {
     currentLang = currentLang === 'fr' ? 'en' : 'fr';
     updateTranslations();
-  });
+    langToggle.classList.toggle('fr');
+  });  
 
   themeToggle.addEventListener('click', function () {
     body.classList.toggle('dark');
