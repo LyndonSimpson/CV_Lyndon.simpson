@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Profile &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Lyndon Simpson - développeur web</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -66,15 +66,15 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+						<div id="vantaJS" class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<div class="profile-thumb" style="background: url(/public/unnamed\ Cropped.jpg);"></div>
 							<h1><span>Lyndon Simpson</span></h1>
-							<h3><span>Web Developer / Photographer</span></h3>
+							<h3><span>Développeur Web et Web Mobile</span></h3>
 							<p>
 								<ul class="fh5co-social-icons">
 									<li><a href="#"><i class="icon-twitter2"></i></a></li>
 									<li><a href="#"><i class="icon-facebook2"></i></a></li>
-									<li><a href="/index.html"><i class="icon-linkedin2"></i></a></li>
+									<li><a href="/RESUME/index.html"><i class="icon-linkedin2"></i></a></li>
 									<li><a href="#"><i class="icon-dribbble2"></i></a></li>
 								</ul>
 							</p>
@@ -647,10 +647,34 @@
 	<!-- Google Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<script src="js/google_map.js"></script>
-	
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	<!-- VantaJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.halo.min.js"></script>
+    <script type="text/javascript">
+        VANTA.HALO ({
+            el: "#vantaJS",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minheight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+			size: 0.70,
+			backgroundColor: 0x190933
+        })
+    </script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script>
+		particlesJS.load('fh5co-about', 'particles-config.json', function() {
+		  console.log('particles.js loaded - callback');
+		});
+		particlesJS.load('fh5co-skills', 'particles-config.json', function() {
+		  console.log('particles.js loaded - callback');
+		});
+	</script>
 	</body>
 </html>
 

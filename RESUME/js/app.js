@@ -1,4 +1,4 @@
-import translations from './translations.js';
+import translations from '../translations.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   const langToggle = document.getElementById('lang-toggle');
