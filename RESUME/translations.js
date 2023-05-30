@@ -13,8 +13,6 @@ export default {
     skills_languages: "Languages: Bilingual english",
     skills_soft: "Soft skills: Autonomous, versatile, and passionate about learning",
     experiences_title: "Experiences",
-
-    // insert missing translation here -lines 73 to 94 in html
     experience1_title: "Mhumain, Remote Work - Lead back-end developer, git master October - November 2022",
     backend_realization: "● Back-end development:",
     backend_realization_details: "Database, API, documentation, JSdoc, security, registration and login, password recovery, internal messaging system",
@@ -30,7 +28,6 @@ export default {
     customer_advising: "Customer advising",
     boutique_management: "Parisian boutique management",
     social_media_management: "Social media management and content creation",
-
     projects_title: "Projects",
     project1_title: "Mhumain, Remote work — Lead back-end dev, git master October - November 2022, Professional project",
     project1_repo: "GitHub Repo",
@@ -52,8 +49,6 @@ export default {
     skills_languages: "Langues: Anglais bilingue",
     skills_soft: "Soft skills: Autonome, polyvalent et passionné d'apprentissage",
     experiences_title: "Expériences",
-
-    // insert missing translation here -lines 73 to 94 in html
     experience1_title: "Mhumain, Teletravail - Lead dev back, gitmaster Octobre - Novembre 2022",
     backend_realization: "● Réalisation de la partie back-end :",
     backend_realization_details: "Base de données, API, documentation, JSdoc, sécurité, inscription et connexion, récupération de mot de passe, système de messagerie interne",
@@ -69,7 +64,6 @@ export default {
     customer_advising: "Conseils personnalisés auprès de la clientèle",
     boutique_management: "Gestion de la boutique parisienne",
     social_media_management: "Gestion des réseaux sociaux et création de contenu",
-
     projects_title: "Projets",
     project1_title: "Mhumain, Télétravail — Lead dev back-end, git master Octobre - Novembre 2022, Projet professionnel",
     project1_repo: "Dépôt GitHub",
@@ -77,5 +71,4 @@ export default {
     project2_description: "Projet personnel qui imite un journal intime, mais le rend dynamique et propose une manipulation des données permettant une navigation plus intuitive à travers les souvenirs",
     project2_status: "Projet en construction"
   }
-
 };
