@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Text RPG</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <div id="particles-js"></div>
+
+        <div class="game-container">
+            <div id="image-section" class="game-section">
+                <img id="game-image" src="/public/introScene.jpg" alt="">
+            </div>
+            <div id="story" class="game-section"></div>
+            <div id="options" class="game-section"></div>
+            <div id="inventory" class="game-section">
+                <h3>Sac :</h3>
+                <div class="inventory-container">
+                    <div id="inventory-items"></div>
+                </div>
+            </div>
+
+            <div id="character" class="game-section">
+                <h3>Tes stats :</h3>
+                <div id="character-stats">
+                    <div id="health">Santé : <span id="health-value"></span></div>
+                    <div id="drunkness">Ivresse : <span id="drunkness-value"></span></div>
+                    <!-- <div id="stoned">fonfon : <span id="stoned-value"></span></div>  add this but fix the CSS for responsive - lign them up-->
+                  </div>
+            </div>
+        </div>
+        <div id="controls">
+            <button id="save-game">Sauvegarder</button>
+            <button id="load-game">Charger</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="module" src="game.js"></script>
+
+</body>
+</html>
+
+
+
