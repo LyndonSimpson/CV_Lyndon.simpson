@@ -40,6 +40,22 @@ const gameStates1 = [{ //0
       text: "Pierre",
       nextState: 8
     },
+    {
+      text: "Tam",
+      nextState: 8
+    },
+    {
+      text: "Clement",
+      nextState: 8
+    },
+    {
+      text: "Lyndon",
+      nextState: 8
+    },
+    {
+      text: "Seb",
+      nextState: 40
+    },
   ],
   image: "./public/Level1/introScene.jpg",
   music: "./music/captain.mp3",

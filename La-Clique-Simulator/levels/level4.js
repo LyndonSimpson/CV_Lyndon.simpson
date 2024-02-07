@@ -114,29 +114,27 @@ const gameStates4 = [
     },
   
     { //40
-      story: "LEVEL 2 CONNECTED",
+      story: "Seb te propose d'aller se poser aux buttes chaumont ou de le rejoindre plus tard au Chat noir",
       options: [{
-          text: "Oui",
-          nextState: 1
+          text: "Ok, le rejoindre aux buttes",
+          nextState: 41
         },
         {
-          text: "Non",
-          nextState: 2
+          text: "Aller direct au Chat noir",
+          nextState: 39
         },
       ],
+      image: "./public/Level1/menilmontantMetro.jpg",
     },
   
     { //41
-      story: "LEVEL 2 CONNECTED",
+      story: "Buttes chaumont connected",
       options: [{
-          text: "Oui",
+          text: "Ok",
           nextState: 1
         },
-        {
-          text: "Non",
-          nextState: 2
-        },
       ],
+      image: "./public/Level3/buttes.png",
     },
   
     { //42
