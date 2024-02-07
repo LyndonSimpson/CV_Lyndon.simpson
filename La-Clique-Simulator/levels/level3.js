@@ -12,7 +12,7 @@ const gameStates3 = [
         },
         {
           text: "Osef, je vais au Chat noir, il fait soif!",
-          nextState: 13
+          nextState: 39
         },
       ],
       image: "./public/Level2/phoneCall.jpg",
@@ -22,7 +22,7 @@ const gameStates3 = [
       story: "Tu vois sortir d'une voiture de Luxe un type qui fait un peu mafieux. Ton instinct te dit qu'il y a danger, que fais tu ?",
       options: [{
           text: "Je prends la fuite et je cours pour le Chat noir, la peur donne des aîles!",
-          nextState: 13
+          nextState: 39
         },
         {
           text: "Je n'écoute pas mon instinct de survie et reste planté la avec le Tel dans la main, sourire aux lèvres :)",
@@ -56,7 +56,7 @@ const gameStates3 = [
       story: "'T'as intérêt à pas me mito! Si c'est une autre magouille de shake ce sera pas just elui qui sera dans la merde!'",
       options: [{
           text: "'T'inquiètes Shake m'a dit que tout était bon! tu verras' - Rendre le portable et partir au Chat noir",
-          nextState: 13
+          nextState: 39
         },
       ],
       image: "./public/Level2/mafiaPic.jpg",
@@ -66,7 +66,7 @@ const gameStates3 = [
       story: "Le garde du corps te prends le portable 'T'as intérêt à dire la vérité, ou le patron va être obligé de me demander qui t'es, si tu vois ce que je veux dire'",
       options: [{
           text: "'Promis je sais rien! - partir au Chat noir",
-          nextState: 13
+          nextState: 39
         },
       ],
       image: "./public/Level2/mafiaPic.jpg",

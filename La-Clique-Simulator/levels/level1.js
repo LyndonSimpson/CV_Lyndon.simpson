@@ -42,6 +42,7 @@ const gameStates1 = [{ //0
     },
   ],
   image: "./public/Level1/introScene.jpg",
+  music: "./music/captain.mp3",
 },
 {//2
   story: "GAME OVER!",
@@ -51,7 +52,8 @@ const gameStates1 = [{ //0
       nextState: 0
     }
   ], // Empty options, as the game ends here
-  image: "./public/gameOver.jpg"
+  image: "./public/gameOver.jpg",
+  music: "./music/merde.mp3",
 },
 {//3
   story: "tu appelles Omran, il te propose de le rejoindre chez lui pour ballader Nala",
@@ -61,7 +63,7 @@ const gameStates1 = [{ //0
     },
     {
       text: "'viens on va plutôt direct au chat noir pour boire une bière ?'",
-      nextState: 13
+      nextState: 39
     },
   ], // Empty options, as the game ends here
   image: "./public/Level1/menilmontantMetro.jpg",
@@ -80,7 +82,7 @@ const gameStates1 = [{ //0
     },
     {
       text: "Aller direct au Chat noir",
-      nextState: 13
+      nextState: 39
     },
   ],
   image: "./public/Level1/menilmontantMetro.jpg",
@@ -108,7 +110,7 @@ const gameStates1 = [{ //0
   options: [{
       text: "Ok",
 
-      nextState: 13
+      nextState: 39
     },
   ],
   image: "./public/Level1/guitarPick.jpg",
@@ -122,7 +124,7 @@ const gameStates1 = [{ //0
         player.gainDrunkness(20);
         updateCharacterInfo(healthValueElement, drunknessValueElement);
       },
-      nextState: 13
+      nextState: 39
     },
   ],
   image: "./public/Level1/happyNPC.jpg",
@@ -136,7 +138,7 @@ const gameStates1 = [{ //0
     },
     {
       text: "tu décides de rejoindre directement Pierre au Chat noir",
-      nextState: 13
+      nextState: 39
     },
   ],
   image: "./public/Level1/egliseMenilmontant.jpg",

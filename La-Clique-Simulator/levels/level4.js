@@ -57,7 +57,7 @@ const gameStates4 = [
       story: "'BLASPHÈME - 1 an de maleur de caca de pigeon : mes confrères vous arroseront - dans un an je reviens tester votre âme' Le pigeon dispraît dans un nuage de fumée - *POOF* - Omran rentre chez lui pour le moment, il a besoin de se calmer après avoir encore rencontré son nemesis",
       options: [{
           text: "Aller au chat noir!",
-          nextState: 13
+          nextState: 39
         },
       ],
       image: "./public/Level3/pigeon.png",
@@ -67,7 +67,7 @@ const gameStates4 = [
       story: "'il vous portera bonheur dans votre quête à la déglingue ce soir, bon courage!' - Le pigeon disparaît dans un nuage de fumée *POOF* - Omran a besoin d'aller se calmer chez lui après cette rencontre avec son nemesis...",
       options: [{
           text: "Aller au chat noir!",
-          nextState: 13
+          nextState: 39
         },
       ],
       image: "./public/Level3/pigeon.png",
@@ -104,16 +104,13 @@ const gameStates4 = [
     },
   
     { //39
-      story: "LEVEL 2 CONNECTED",
+      story: "tu te mets en route pour le chat noir, tranquilement, tu marches rue JPT",
       options: [{
-          text: "Oui",
-          nextState: 1
-        },
-        {
-          text: "Non",
-          nextState: 2
+          text: "Ok",
+          nextState: 13
         },
       ],
+      image: "./public/street.jpg",
     },
   
     { //40

@@ -76,7 +76,7 @@ const gameStates2 = [
     story: "Tu refuses l'objet. Vous partez au chat noir mais sur el chemin Pierre doit faire un détour, alors tu y vas tout seul",
     options: [{
         text: "Ok",
-        nextState: 13
+        nextState: 39
       },
     ],
     image: "./public/Level1/egliseMenilmontant.jpg",
@@ -174,7 +174,7 @@ const gameStates2 = [
       },
       {
         text: "Non, l'éteindre et s'en occuper demain",
-        nextState: 13
+        nextState: 39
       },
     ],
     image: "./public/Level2/phoneCall.jpg",
@@ -188,7 +188,7 @@ const gameStates2 = [
       },
       {
         text: "Raccrocher et aller au Chat noir, osef de ce Shake XD",
-        nextState: 13
+        nextState: 39
       },
     ],
     image: "./public/Level2/phoneCall.jpg",

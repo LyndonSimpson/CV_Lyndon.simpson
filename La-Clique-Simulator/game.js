@@ -75,6 +75,21 @@ function typeWriterEffect(element, text, delay) {
   type();
 }
 
+
+// for looping music
+let currentMusic = "";
+const audioElement = new Audio();
+audioElement.loop = true; // Enable looping
+
+// update music function for updating music depending on state
+function updateMusic(musicPath) {
+  if (currentMusic !== musicPath) {
+    currentMusic = musicPath;
+    audioElement.src = musicPath;
+    audioElement.play();
+  }
+}
+
 function updateStory() {
   const gameState = gameStates[currentState];
   storyElement.textContent = "";
@@ -91,6 +106,12 @@ function updateStory() {
   // Update the image source based on the current game state
   const gameImage = document.getElementById("game-image");
   gameImage.src = gameState.image;
+
+  // update the music depending on the state
+  if (gameState.music) {
+    updateMusic(gameState.music);
+  }
+
 }
 
 updateStory();
