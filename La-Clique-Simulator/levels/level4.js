@@ -74,16 +74,33 @@ const gameStates4 = [
     },
   
     { //38
-      story: "LEVEL 2 CONNECTED",
+      story: "que veux tu boire?",
       options: [{
-          text: "Oui",
-          nextState: 1
+          text: "Bière",
+          onChoose: () => {
+            player.gainDrunkness(10);
+            updateCharacterInfo(healthValueElement, drunknessValueElement);
+          },
+          nextState: 16
         },
         {
-          text: "Non",
-          nextState: 2
+          text: "Vin",
+          onChoose: () => {
+            player.gainDrunkness(10);
+            updateCharacterInfo(healthValueElement, drunknessValueElement);
+          },
+          nextState: 17
+        },
+        {
+          text: "Calva",
+          onChoose: () => {
+            player.gainDrunkness(20);
+            updateCharacterInfo(healthValueElement, drunknessValueElement);
+          },
+          nextState: 18
         },
       ],
+      image:"./public/Level3/menu.png",
     },
   
     { //39

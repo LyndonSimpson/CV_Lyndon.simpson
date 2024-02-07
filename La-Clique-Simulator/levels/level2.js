@@ -96,6 +96,10 @@ const gameStates2 = [
         },
         nextState: 16
       },
+      {
+        text: "Boire autre chose",
+        nextState: 38
+      },
     ],
     image: "./public/Level1/Beer.png",
   },
@@ -114,6 +118,10 @@ const gameStates2 = [
         },
         nextState: 17
       },
+      {
+        text: "Boire autre chose",
+        nextState: 38
+      },
     ],
     image: "./public/Level1/Wine.png",
   },
@@ -131,6 +139,10 @@ const gameStates2 = [
           updateCharacterInfo(healthValueElement, drunknessValueElement);
         },
         nextState: 18
+      },
+      {
+        text: "Boire autre chose",
+        nextState: 38
       },
     ],
     image: "./public/Level1/Calva.png",
