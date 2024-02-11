@@ -28,6 +28,42 @@ body {
     width: 80%;
 }
 
+#header {
+  background-color: #39FF14; /* Green background */
+  background-image: url("./public/banner2.jpg");
+  color: #00ff00; /* black text */
+  text-align: center; /* Centers the text horizontally */
+  padding: 10px 0; /* 10px top and bottom padding, 0 left and right */
+  width: 100%; /* Full width */
+}
+
+#footer {
+  background-color: #2b8d1a; /* Green background */
+  color: black; /* black text */
+  text-align: center; /* Centers the text horizontally */
+  padding: 10px 0; /* 10px top and bottom padding, 0 left and right */
+  width: 100%; /* Full width */
+}
+
+#header {
+  position: fixed; /* Fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+#footer {
+  position: fixed; /* Fixed at the bottom */
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+body {
+  padding-top: 60px; /* Adjust based on header height */
+  padding-bottom: 60px; /* Adjust based on footer height */
+}
+
 #image-section {
     border: 2px solid #00ff00; /* Neon green border */
     padding: 10px;

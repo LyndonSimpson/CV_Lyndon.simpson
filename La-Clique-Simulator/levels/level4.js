@@ -128,37 +128,33 @@ const gameStates4 = [
     },
   
     { //41
-      story: "Buttes chaumont connected",
+      story: "Tu arrives ux buttes chaumont où tu captes Seb. Vous vous posez en haut du belvédère et vous admirez la vue",
       options: [{
           text: "Ok",
-          nextState: 1
+          nextState: 42
         },
       ],
       image: "./public/Level3/buttes.png",
     },
   
     { //42
-      story: "LEVEL 2 CONNECTED",
+      story: "Pendant que vous êtez posés tout en haut de la butte, quelqu'un remarque que Seb a un skate. Cette personne viet lui donner un flyer. 'Eh mec, regarde ça'",
       options: [{
-          text: "Oui",
-          nextState: 1
-        },
-        {
-          text: "Non",
-          nextState: 2
+          text: "Prendre le flyer",
+          nextState: 43
         },
       ],
     },
   
     { //43
-      story: "LEVEL 2 CONNECTED",
+      story: "COMPET DE SKATE AVEC INSCRIPTION LIBRE : descente de la rue de bellville - Tu vois que Seb hésites à y aller",
       options: [{
-          text: "Oui",
-          nextState: 1
+          text: "On devrait y aller",
+          nextState: 44
         },
         {
-          text: "Non",
-          nextState: 2
+          text: "La rue de belleville! bonne chance, ils vont se rétame!",
+          nextState: 44
         },
       ],
     },

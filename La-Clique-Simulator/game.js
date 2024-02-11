@@ -15,7 +15,9 @@ import gameStates1 from './levels/level1.js';
 import gameStates2 from './levels/level2.js';
 import gameStates3 from './levels/level3.js';
 import gameStates4 from './levels/level4.js';
-const gameStates = [...gameStates1, ...gameStates2, ...gameStates3, ...gameStates4];
+import gameStates5 from './levels/level5.js';
+import gameStates6 from './levels/level6.js';
+const gameStates = [...gameStates1, ...gameStates2, ...gameStates3, ...gameStates4, ...gameStates5, ...gameStates6];
 
 
 saveButton.addEventListener("click", saveGame);
