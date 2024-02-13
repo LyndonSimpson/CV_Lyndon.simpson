@@ -144,19 +144,21 @@ const gameStates4 = [
           nextState: 43
         },
       ],
+      image: "./public/Level4/buttes2.jpg",
     },
   
     { //43
-      story: "COMPET DE SKATE AVEC INSCRIPTION LIBRE : descente de la rue de bellville - Tu vois que Seb hésites à y aller",
+      story: "COMPET DE SKATE AVEC INSCRIPTION LIBRE : descente de la rue de Ménilmontant - Tu vois que Seb hésites à y aller",
       options: [{
           text: "On devrait y aller",
           nextState: 44
         },
         {
-          text: "La rue de belleville! bonne chance, ils vont se rétame!",
+          text: "La rue de Ménimontant! bonne chance, ils vont se rétame!",
           nextState: 44
         },
       ],
+      image: "./public/Level4/flyer.jpg",
     },
   ];
   

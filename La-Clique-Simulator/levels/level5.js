@@ -15,7 +15,7 @@ const gameStates5 = [
           nextState: 46
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level4/buttes.jpg",
     },
   
     { //45
@@ -25,7 +25,7 @@ const gameStates5 = [
           nextState: 47
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level4/buttes.jpg",
     },
   
     { //46
@@ -35,7 +35,7 @@ const gameStates5 = [
           nextState: 39
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level4/thinking2.jpg",
     },
   
     { //47
@@ -49,7 +49,7 @@ const gameStates5 = [
           nextState: 39
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level4/race2.jpg",
     },
   
     { //48
@@ -75,7 +75,7 @@ const gameStates5 = [
           nextState: 39
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level4/thinking2.jpg",
     },
   
     { //49
@@ -85,11 +85,11 @@ const gameStates5 = [
           nextState: 53
         },
       ],
-      image:"./public/Level3/menu.png",
+      image:"./public/Level4/thinking2.jpg",
     },
   
     { //50
-      story: "tu te mets en route pour le chat noir, tranquilement, tu marches rue JPT",
+      story: "A REMPLIR / CLAQUE DOIGT DEBUT",
       options: [{
           text: "Ok",
           nextState: 13
@@ -99,7 +99,7 @@ const gameStates5 = [
     },
   
     { //51
-      story: "Seb te propose d'aller se poser aux buttes chaumont ou de le rejoindre plus tard au Chat noir",
+      story: "A REMPLIR? SEB PIECE PORTE BONHEUR START",
       options: [{
           text: "Ok, le rejoindre aux buttes",
           nextState: 41
@@ -134,6 +134,7 @@ const gameStates5 = [
           nextState: 55
         },
       ],
+      image: "./public/Level4/win2.jpg",
     },
   
     { //54
@@ -146,6 +147,7 @@ const gameStates5 = [
           nextState: 39
         },
       ],
+      image: "./public/Level4/flyer2.jpg",
     },
   ];
   

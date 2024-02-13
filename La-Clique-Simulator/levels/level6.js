@@ -11,11 +11,11 @@ const gameStates6 = [
           nextState: 39
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level4/flyer2.jpg",
     },
   
     { //56
-      story: "'Vazy, on y va, je t'accompagne! tu vas tout défoncer, tu descends ces rues depuis des années maintenant, quoi qu'il arrive ça sera marrant!' - Vous vous mettez en route pour le haut de la rue de belleville",
+      story: "A REMPLIR",
       options: [{
           text: "Ok",
           nextState: 47
@@ -25,7 +25,7 @@ const gameStates6 = [
     },
   
     { //57
-      story: "Seb se décourage, mais au moins il reste en sécurité. Il ne peut pas t'accompagner au Chat noir directement Il doit diner avec sa famille et te rejoint plus tard",
+      story: "A REMPLIR",
       options: [{
           text: "Ok",
           nextState: 39
@@ -35,7 +35,7 @@ const gameStates6 = [
     },
   
     { //58
-      story: "Vous arrivez tout en haut de la descente, il y beaucoup de monde, c'est tout un event! Il y a de la musique, des skateurs et une foule qui a hâte de voir de la descente!",
+      story: "A REMPLIR",
       options: [{
           text: "Aller inscrire Seb à la table des juges et se poser regarder les premières descentes",
           nextState: 48
@@ -49,7 +49,7 @@ const gameStates6 = [
     },
   
     { //59
-      story: "Les premiers skateurs se tapent la descente et ça à l'air énervé! Seb va se mettre en place. Tu peux l'aider en faisant une des choses suivantes :",
+      story: "A REMPLIR",
       options: [{
           text: "lui donner une flasque de rhum pour qu'il en boive un peu",
           nextState: 49
@@ -75,7 +75,7 @@ const gameStates6 = [
     },
   
     { //60
-      story: "Se boit quelques gorgées de la flasque et se prépare à descendre la rue pour la course. Tu te choppes une bonne place pour regarder l'action",
+      story: "A REMPLIR",
       options: [{
           text: "Ok",
           nextState: 53
@@ -85,7 +85,7 @@ const gameStates6 = [
     },
   
     { //61
-      story: "tu te mets en route pour le chat noir, tranquilement, tu marches rue JPT",
+      story: "A REMPLIR",
       options: [{
           text: "Ok",
           nextState: 13
@@ -95,7 +95,7 @@ const gameStates6 = [
     },
   
     { //62
-      story: "Seb te propose d'aller se poser aux buttes chaumont ou de le rejoindre plus tard au Chat noir",
+      story: "A REMPLIR",
       options: [{
           text: "Ok, le rejoindre aux buttes",
           nextState: 41
@@ -109,7 +109,7 @@ const gameStates6 = [
     },
   
     { //63
-      story: "Bah non, ça c'était vraiment pas une bonne idée, tu t'es éclaté par terre et maintenant t'es mort. Tu ne savais même pas faire du skate! Try again!",
+      story: "A REMPLIR",
       options: [{
           text: "Ok",
           nextState: 1
@@ -120,7 +120,7 @@ const gameStates6 = [
     },
   
     { //64
-      story: "Quelle descente incroyable!! Seb dégome tous ses adversaires, il remporte la première place - il Gagne un trophé et une planche de skate - mais il n'aime pas la planche de skate, il veut te l'offrir pour te remercier de l'avoir motivé",
+      story: "A REMPLIR",
       options: [{
           text: "Accepter le skate",
           nextState: 54
@@ -133,7 +133,7 @@ const gameStates6 = [
     },
   
     { //65
-      story: "Tu ranges le cruiser dans ton sac et te met en route pour le chat noir, Seb te rejoint plus tard!",
+      story: "A REMPLIR",
       options: [{
           text: "Ok",
           nextState: 44
