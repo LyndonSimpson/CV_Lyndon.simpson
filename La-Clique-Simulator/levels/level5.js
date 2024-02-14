@@ -68,6 +68,11 @@ const gameStates5 = [
         },
         {
           text: "Lui proposer de faire la course avec lui pour le motiver (tu as un coup de folie)",
+          onChoose: () => {
+            addItem("'I died' T-shirt", inventory, () => updateInventory(inventory, inventoryElement));
+            //player.loseHealth(100);
+            //updateCharacterInfo(healthValueElement, drunknessValueElement);
+          },
           nextState: 52
         },
         {
@@ -89,34 +94,30 @@ const gameStates5 = [
     },
   
     { //50
-      story: "A REMPLIR / CLAQUE DOIGT DEBUT",
+      story: "Quelle idée, il se fait cramer à essayer de jeter des claques doigts sur les autres participants et se fait éliminer! Il a besoin de se poser chez lui après cette défaite et te rejoint plus tard au Chat noir",
       options: [{
           text: "Ok",
-          nextState: 13
-        },
-      ],
-      image: "./public/street.jpg",
-    },
-  
-    { //51
-      story: "A REMPLIR? SEB PIECE PORTE BONHEUR START",
-      options: [{
-          text: "Ok, le rejoindre aux buttes",
-          nextState: 41
-        },
-        {
-          text: "Aller direct au Chat noir",
           nextState: 39
         },
       ],
-      image: "./public/Level1/menilmontantMetro.jpg",
+      image: "./public/Level4/flyer2.jpg",
+    },
+  
+    { //51
+      story: "Eh bah la pièce porte bonheur a pas changé grand chose, c'était un peu une idée toute nulle finalement! Seb a besoin de se poser chez lui après cette défaite et te rejoint plus tard au Chat noir",
+      options: [{
+          text: "Ok",
+          nextState: 39
+        },
+      ],
+      image: "./public/Level4/flyer2.jpg",
     },
   
     { //52
       story: "Bah non, ça c'était vraiment pas une bonne idée, tu t'es éclaté par terre et maintenant t'es mort. Tu ne savais même pas faire du skate! Try again!",
       options: [{
           text: "Ok",
-          nextState: 1
+          nextState: 0
         },
       ],
       image: "./public/gameOver.jpg",

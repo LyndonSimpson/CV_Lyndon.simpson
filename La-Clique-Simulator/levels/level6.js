@@ -15,90 +15,85 @@ const gameStates6 = [
     },
   
     { //56
-      story: "A REMPLIR",
+      story: "Clement phone call - accept or decline activité Clement (music related ?)",
       options: [{
-          text: "Ok",
-          nextState: 47
+          text: "Rejoindre activité Clement",
+          nextState: 57
+        },
+        {
+          text: "Aller direct au Chat noir",
+          nextState: 39
         },
       ],
       image: "./public/Level3/pigeon.png",
     },
   
     { //57
-      story: "A REMPLIR",
+      story: "Activité Clement accept object state",
       options: [{
-          text: "Ok",
-          nextState: 39
+          text: "accept",
+          onChoose: () => {
+            addItem("Clement quest item", inventory, () => updateInventory(inventory, inventoryElement));
+         },
+          nextState: 58
+        },
+        {
+          text: "decline",
+          nextState: 59
         },
       ],
       image: "./public/Level3/pigeon.png",
     },
   
     { //58
-      story: "A REMPLIR",
+      story: "YOU ACCEPTED CLEMENT QUEST ITEM TEXT",
       options: [{
-          text: "Aller inscrire Seb à la table des juges et se poser regarder les premières descentes",
-          nextState: 48
-        },
-        {
-          text: "Conviancre Seb que c'est juste dangeureux, autant aller tranquil boire une bière au Chat noir",
-          nextState: 39
+          text: "Ok",
+          nextState: 60
         },
       ],
       image: "./public/Level3/pigeon.png",
     },
   
     { //59
-      story: "A REMPLIR",
+      story: "YOU DECLINED CLEMENT QUEST ITEM TEXT",
       options: [{
-          text: "lui donner une flasque de rhum pour qu'il en boive un peu",
-          nextState: 49
-        },
-        {
-          text: "Lui donner des claque doigts pour dérouter ses adversaires pendant la course",
-          nextState: 50
-        },
-        {
-          text: "Lui donner une pièce porte bonheur",
-          nextState: 51
-        },
-        {
-          text: "Lui proposer de faire la course avec lui pour le motiver (tu as un coup de folie)",
-          nextState: 52
-        },
-        {
-          text: "Conviancre Seb que c'est juste dangeureux, il est encore temps de faire demi tour: autant aller tranquil boire une bière au Chat noir",
-          nextState: 39
+          text: "Ok",
+          nextState: 60
         },
       ],
       image: "./public/Level3/pigeon.png",
     },
   
     { //60
-      story: "A REMPLIR",
+      story: "EXTRA CLEMENT QUEST STEP",
       options: [{
-          text: "Ok",
-          nextState: 53
+          text: "Oui",
+          nextState: 61
+        },
+        {
+          text: "Non",
+          nextState: 62
         },
       ],
       image:"./public/Level3/menu.png",
     },
   
     { //61
-      story: "A REMPLIR",
+      story: "A REMPLIR -clement reserved state",
       options: [{
           text: "Ok",
-          nextState: 13
+          nextState: 39
         },
       ],
       image: "./public/street.jpg",
     },
   
     { //62
-      story: "A REMPLIR",
+      story: "A REMPLIR -clement reserved state",
       options: [{
           text: "Ok, le rejoindre aux buttes",
-          nextState: 41
+          nextState: 39
         },
         {
           text: "Aller direct au Chat noir",
@@ -109,7 +104,7 @@ const gameStates6 = [
     },
   
     { //63
-      story: "A REMPLIR",
+      story: "A REMPLIR - first tamara state",
       options: [{
           text: "Ok",
           nextState: 1

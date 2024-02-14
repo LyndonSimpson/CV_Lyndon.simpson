@@ -149,17 +149,17 @@ const gameStates2 = [
   },
 
   { //19
-    story: "Un homme mystérieux te remarque au bar et te demande ce que tu comptes faire ce soir ? il prétend pouvoir offrir tout ce que tu veux!",
+    story: "Tu es posé au bar du Chat noir en train d'attendre la Clique. PROPOSITION PERSONNAGE MYSTéRIEUX",
     options: [{
-        text: "option 1 - nightclub party",
+        text: "nightclub party",
         nextState: 27
       },
       {
-        text: "option 2 - soirée appart",
+        text: "soirée appart",
         nextState: 28
       },
       {
-        text: "option 3 - concert jazz manouche",
+        text: "concert jazz manouche",
         nextState: 29
       },
     ],

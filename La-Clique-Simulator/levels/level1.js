@@ -14,8 +14,8 @@ const gameStates1 = [{ //0
       nextState: 2,
       onChoose: () => {
         addItem("'I gave up' T-shirt", inventory, () => updateInventory(inventory, inventoryElement));
-        player.loseHealth(100);
-        updateCharacterInfo(healthValueElement, drunknessValueElement);
+        //player.loseHealth(100);
+        //updateCharacterInfo(healthValueElement, drunknessValueElement);
       },
     },
   ],
@@ -42,11 +42,11 @@ const gameStates1 = [{ //0
     },
     {
       text: "Tam",
-      nextState: 8
+      nextState: 63
     },
     {
       text: "Clement",
-      nextState: 8
+      nextState: 56
     },
     {
       text: "Lyndon",
