@@ -42,7 +42,7 @@ const gameStates1 = [{ //0
     },
     {
       text: "Tam",
-      nextState: 63
+      nextState: 1
     },
     {
       text: "Clement",
@@ -79,7 +79,11 @@ const gameStates1 = [{ //0
     },
     {
       text: "'viens on va plutôt direct au chat noir pour boire une bière ?'",
-      nextState: 39
+      nextState: 73
+    },
+    {
+      text: "Appeler quelqu'un d'autre",
+      nextState: 63
     },
   ], // Empty options, as the game ends here
   image: "./public/Level1/menilmontantMetro.jpg",
@@ -98,7 +102,11 @@ const gameStates1 = [{ //0
     },
     {
       text: "Aller direct au Chat noir",
-      nextState: 39
+      nextState: 74
+    },
+    {
+      text: "Appeler quelqu'un d'autre",
+      nextState: 63
     },
   ],
   image: "./public/Level1/menilmontantMetro.jpg",
@@ -110,7 +118,7 @@ const gameStates1 = [{ //0
       text: "Je décide de le garder pour moi, il est ebaucoup trop beau!",
       nextState: 6,
       onChoose: () => {
-        addItem("Médiator multicolor psychadélique", inventory, () => updateInventory(inventory, inventoryElement));
+        addItem("funky médiator", inventory, () => updateInventory(inventory, inventoryElement));
       },
     },
     {
@@ -126,7 +134,7 @@ const gameStates1 = [{ //0
   options: [{
       text: "Ok",
 
-      nextState: 39
+      nextState: 74
     },
   ],
   image: "./public/Level1/guitarPick.jpg",
@@ -140,7 +148,7 @@ const gameStates1 = [{ //0
         player.gainDrunkness(20);
         updateCharacterInfo(healthValueElement, drunknessValueElement);
       },
-      nextState: 39
+      nextState: 74
     },
   ],
   image: "./public/Level1/happyNPC.jpg",
@@ -154,7 +162,11 @@ const gameStates1 = [{ //0
     },
     {
       text: "tu décides de rejoindre directement Pierre au Chat noir",
-      nextState: 39
+      nextState: 75
+    },
+    {
+      text: "Appeler quelqu'un d'autre",
+      nextState: 63
     },
   ],
   image: "./public/Level1/egliseMenilmontant.jpg",

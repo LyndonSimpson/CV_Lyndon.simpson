@@ -32,7 +32,7 @@ const gameStates5 = [
       story: "Seb se décourage, mais au moins il reste en sécurité. Il ne peut pas t'accompagner au Chat noir directement Il doit diner avec sa famille et te rejoint plus tard",
       options: [{
           text: "Ok",
-          nextState: 39
+          nextState: 76
         },
       ],
       image: "./public/Level4/thinking2.jpg",
@@ -46,7 +46,7 @@ const gameStates5 = [
         },
         {
           text: "Conviancre Seb que c'est juste dangeureux, autant aller tranquil boire une bière au Chat noir",
-          nextState: 39
+          nextState: 76
         },
       ],
       image: "./public/Level4/race2.jpg",
@@ -77,7 +77,7 @@ const gameStates5 = [
         },
         {
           text: "Conviancre Seb que c'est juste dangeureux, il est encore temps de faire demi tour: autant aller tranquil boire une bière au Chat noir",
-          nextState: 39
+          nextState: 76
         },
       ],
       image: "./public/Level4/thinking2.jpg",
@@ -97,7 +97,7 @@ const gameStates5 = [
       story: "Quelle idée, il se fait cramer à essayer de jeter des claques doigts sur les autres participants et se fait éliminer! Il a besoin de se poser chez lui après cette défaite et te rejoint plus tard au Chat noir",
       options: [{
           text: "Ok",
-          nextState: 39
+          nextState: 76
         },
       ],
       image: "./public/Level4/flyer2.jpg",
@@ -107,7 +107,7 @@ const gameStates5 = [
       story: "Eh bah la pièce porte bonheur a pas changé grand chose, c'était un peu une idée toute nulle finalement! Seb a besoin de se poser chez lui après cette défaite et te rejoint plus tard au Chat noir",
       options: [{
           text: "Ok",
-          nextState: 39
+          nextState: 76
         },
       ],
       image: "./public/Level4/flyer2.jpg",
@@ -145,7 +145,7 @@ const gameStates5 = [
           onChoose : () => {
             addItem("Cruiser", inventory, () => updateInventory(inventory, inventoryElement));
           },
-          nextState: 39
+          nextState: 76
         },
       ],
       image: "./public/Level4/flyer2.jpg",
