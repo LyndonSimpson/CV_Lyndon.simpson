@@ -9,7 +9,8 @@ function addItem(item) {
 }
 
 function removeItem(item) {
-  const index = inventory.indexOf(item);
+  const nameToRemove = item.name;
+  const index = inventory.findIndex(inventoryItem => inventoryItem.name === nameToRemove);
   if (index > -1) {
     inventory.splice(index, 1);
     updateInventory();

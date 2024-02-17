@@ -37,14 +37,16 @@ const gameStates3 = [
       options: [{
           text: "'Je connais pas Shake je vous jure, on m'a donné ce portable au théâtre!' - rendre portable",
           onChoose : () => {
-            removeItem("Téléphone portable inconnu", inventory, () => updateInventory(inventory, inventoryElement));
+            removeItem({ name: "portable inconnu", icon: "./public/items/phone.png" });
+            updateInventory();
           },
           nextState: 25
         },
         {
           text: "MENTIR 'Ok, Shake m'a donné son portable et m'a dit qu'il partai se cacher chez ses parents, je veux pas d'emmerdes, volà le portable' - rendre portable",
           onChoose : () => {
-            removeItem("Téléphone portable inconnu", inventory, () => updateInventory(inventory, inventoryElement));
+            removeItem({ name: "portable inconnu", icon: "./public/items/phone.png" });
+            updateInventory();
           },
           nextState: 26
         },
