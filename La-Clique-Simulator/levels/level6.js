@@ -44,7 +44,8 @@ const gameStates6 = [
         {
           text: "Choisir le synthé grille-pain",
           onChoose: () => {
-            addItem("funky toaster", inventory, () => updateInventory(inventory, inventoryElement));
+            addItem({ name: "funky toaster", icon: "./public/items/toaster.png" });
+            updateInventory();
           },
           nextState: 59
         },

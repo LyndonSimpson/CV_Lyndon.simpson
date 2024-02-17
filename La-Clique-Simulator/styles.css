@@ -31,7 +31,7 @@ body {
 #header {
   background-color: #39FF14; /* Green background */
   background-image: url("./public/banner2.jpg");
-  color: #00ff00; /* black text */
+  color: #00ff00; /* green text */
   text-align: center; /* Centers the text horizontally */
   padding: 10px 0; /* 10px top and bottom padding, 0 left and right */
   width: 100%; /* Full width */
@@ -143,6 +143,7 @@ button:hover {
   display: flex;
   justify-content: space-around;
   margin: 10px 0;
+  color: blueviolet;
 }
 
 #health,
@@ -153,21 +154,33 @@ button:hover {
 }
 
 #inventory {
-    margin-top: 30px;
-    background-color: black;
+  margin-top: 30px;
+  background-color: black;
+  color: white; /* For better visibility against the black background */
 }
 
 .inventory-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Increased gap for more space between items */
 }
 
 .item {
-    border: 1px solid #00ff00; /* Neon green color */
-    padding: 10px;
-    width: 120px;
+  border: 1px solid #00ff00; /* Neon green color */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  min-width: 175px; /* Increased minimum width */
+  display: flex;
+  align-items: center; /* Align items and text vertically */
+  gap: 10px; /* Space between the icon and the text */
+  justify-content: start; /* Align content to the start if you want text next to the icon */
+}
+
+.item img {
+  width: 30px; /* Adjust based on your preference */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .game-container {

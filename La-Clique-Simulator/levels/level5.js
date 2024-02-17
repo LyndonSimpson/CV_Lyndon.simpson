@@ -69,9 +69,8 @@ const gameStates5 = [
         {
           text: "Lui proposer de faire la course avec lui pour le motiver (tu as un coup de folie)",
           onChoose: () => {
-            addItem("'I died' T-shirt", inventory, () => updateInventory(inventory, inventoryElement));
-            //player.loseHealth(100);
-            //updateCharacterInfo(healthValueElement, drunknessValueElement);
+            addItem({ name: "'I died' T-shirt", icon: "./public/items/shirt1.png" });
+            updateInventory();
           },
           nextState: 52
         },
@@ -143,7 +142,8 @@ const gameStates5 = [
       options: [{
           text: "Ok",
           onChoose : () => {
-            addItem("Cruiser", inventory, () => updateInventory(inventory, inventoryElement));
+            addItem({ name: "cruiser", icon: "./public/items/cruiser.png" });
+            updateInventory();
           },
           nextState: 76
         },

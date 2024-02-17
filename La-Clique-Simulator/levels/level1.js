@@ -12,10 +12,9 @@ const gameStates1 = [{ //0
     {
       text: "Non",
       nextState: 2,
-      onChoose: () => {
-        addItem("'I gave up' T-shirt", inventory, () => updateInventory(inventory, inventoryElement));
-        //player.loseHealth(100);
-        //updateCharacterInfo(healthValueElement, drunknessValueElement);
+      onChoose: () => { // example of how to change all addItem moments : the link for BG removal : works only with png, not first google link!
+        addItem({ name: "'I gave up' T-shirt", icon: "./public/items/shirt.png" });
+        updateInventory();
       },
     },
   ],
@@ -118,7 +117,8 @@ const gameStates1 = [{ //0
       text: "Je décide de le garder pour moi, il est ebaucoup trop beau!",
       nextState: 6,
       onChoose: () => {
-        addItem("funky médiator", inventory, () => updateInventory(inventory, inventoryElement));
+        addItem({ name: "funky médiator", icon: "./public/items/pick.png" });
+        updateInventory();
       },
     },
     {
@@ -178,7 +178,8 @@ const gameStates1 = [{ //0
       text: "Je le prends pour voir si je peux retrouver trouver à qui il appartien après la pièce",
       nextState: 10,
       onChoose: () => {
-        addItem("Téléphone portable inconnu", inventory, () => updateInventory(inventory, inventoryElement));
+        addItem({ name: "portable inconnu", icon: "./public/items/phone.png" });
+        updateInventory();
       },
     },
     {

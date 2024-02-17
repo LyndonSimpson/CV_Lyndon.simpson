@@ -41,7 +41,8 @@ const gameStates4 = [
       options: [{
           text: "Accepter le ticket de métro sacré du pigeon",
           onChoose: () => {
-            addItem("vieux ticket de métro", inventory, () => updateInventory(inventory, inventoryElement));
+            addItem({ name: "vieux ticket de métro", icon: "./public/items/ticket.png" });
+            updateInventory();
           },
           nextState: 37
         },

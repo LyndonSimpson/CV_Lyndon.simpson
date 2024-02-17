@@ -10,7 +10,8 @@ const gameStates2 = [
         text: "Tu acceptes l'armonica",
         nextState: 12,
         onChoose: () => {
-        addItem("armonica", inventory, () => updateInventory(inventory, inventoryElement));
+          addItem({ name: "harmonica", icon: "./public/items/harmonica.png" });
+          updateInventory();
         },
 
       },
