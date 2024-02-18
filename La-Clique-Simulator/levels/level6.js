@@ -29,7 +29,7 @@ const gameStates6 = [
           nextState: 63
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level1/menilmontantMetro.jpg",
     },
   
     { //57
@@ -47,7 +47,7 @@ const gameStates6 = [
           nextState: 59
         },
       ],
-      image: "./public/Level4/toasterREAL.png",
+      image: "./public/Level5/toaster2.png",
     },
   
     { //58
@@ -57,7 +57,7 @@ const gameStates6 = [
           nextState: 77
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level5/toaster1.png",
     },
   
     { //59
@@ -67,7 +67,7 @@ const gameStates6 = [
           nextState: 60
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level4/toasterREAL.png",
     },
   
     { //60
@@ -81,7 +81,7 @@ const gameStates6 = [
           nextState: 62
         },
       ],
-      image:"./public/Level3/menu.png",
+      image:"./public/Level5/toaster3.png",
     },
   
     { //61
@@ -91,7 +91,7 @@ const gameStates6 = [
           nextState: 77
         },
       ],
-      image: "./public/street.jpg",
+      image: "./public/Level5/toaster3.png",
     },
   
     { //62
@@ -101,7 +101,7 @@ const gameStates6 = [
           nextState: 77
         },
       ],
-      image: "./public/Level1/menilmontantMetro.jpg",
+      image: "./public/Level5/toaster1.png",
     },
   
     { //63
