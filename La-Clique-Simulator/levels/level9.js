@@ -5,55 +5,56 @@ import { healthValueElement, drunknessValueElement } from '../game.js';
 const gameStates9 = [
 
     { //88
-      story: "Le pigeon parle : 'tremblez pauvres mortels, je ne vous laisserais tranquile dans cette vie que si vous arrivez à répondre à l'énigme suivante. Vous êtes prêt ?'",
+      story: "Le PIGEON t'as déconnecté du jeu - on ne sait même pas comment il a fait pour tout hacker, mais voilà, tu dois tout recommencer. Try again!",
       options: [{
-          text: "Oui...",
-          nextState: 34
-        },
-        {
-          text: "Non...",
-          nextState: 34
-        },
-      ],
-      image: "./public/Level3/pigeon.png",
-    },
-  
-    { //89
-      story: "L'énigme est la suivante : 'Je suis un pigeon, mais je ne vole pas et je ne roucoule pas. Que suis-je ?'",
-      options: [{
-          text: "Un pigeon en statue",
-          nextState: 35
-        },
-        {
-          text: "Un pigeon voyageur perdu",
-          nextState: 36
-        },
-        {
-          text: "Un pigeon jouant aux échecs",
-          nextState: 36
-        },
-      ],
-      image: "./public/Level3/pigeon.png",
-    },
-  
-    { //90
-      story: "'Bravo, vous avez réussi, tenez, prenez cet objet sacré' - Le pigeon avance sa patte et dévoile Un vieux ticket de métro",
-      options: [{
-          text: "Accepter le ticket de métro sacré du pigeon",
+          text: "Ok",
           onChoose: () => {
-            addItem("vieux ticket de métro", inventory, () => updateInventory(inventory, inventoryElement));
+            addItem({ name: "'I died' T-shirt", icon: "./public/items/shirt1.png" });
+            updateInventory();
           },
-          nextState: 37
-        },
-        {
-          text: "Refuser son ticket tout pourri",
-          nextState: 36
+          nextState: 0
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/gameOver.jpg",
     },
   
-    { //91
+    { //89 SAVED AGAINST HACKS OF PIGEON STATE
+      story: "Tu as réuss! 'Voilà ! Le Contre-PIGEONNet est en place. Grâce à toi, nous avons une chance de repousser cette attaque. Tiens, prends ce Disque Dur Crypté. Il contient des informations cruciales que le PIGEON ne doit pas obtenir'",
+      options: [{
+          text: "Accepter le disque-dur et aller au Chat noir",
+          onChoose: () => {
+            addItem({ name: "disque-dur", icon: "./public/items/drive.png" });
+            updateInventory();
+          },
+          nextState: 79
+        },
+        {
+          text: "Refuser le disque-dur et aller au Chat noir",
+          nextState: 79
+        },
+      ],
+      image: "./public/Level5/Lyndon5.png",
+    },
+  
+    { //90 Tamara first state of first quest here :
+      story: "TAM PHONE CALL CONNECT",
+      options: [{
+      text: "'vazy j'arrive, je suis dans le coin'",
+      nextState: 11
+    },
+    {
+      text: "'viens on va plutôt direct au chat noir pour boire une bière ?'",
+      nextState: 78
+    },
+    {
+      text: "Appeler quelqu'un d'autre",
+      nextState: 63
+    },
+    ], // Empty options, as the game ends here
+    image: "./public/Level1/menilmontantMetro.jpg",
+    },
+  
+    { //91 unused
       story: "'BLASPHÈME - 1 an de maleur de caca de pigeon : mes confrères vous arroseront - dans un an je reviens tester votre âme' Le pigeon dispraît dans un nuage de fumée - *POOF* - Omran rentre chez lui pour le moment, il a besoin de se calmer après avoir encore rencontré son nemesis",
       options: [{
           text: "Aller au chat noir!",

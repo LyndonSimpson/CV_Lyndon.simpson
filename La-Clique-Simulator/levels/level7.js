@@ -24,7 +24,7 @@ const gameStates7 = [
       },
       {
         text: "Lyndon",
-        nextState: 8
+        nextState: 80
       },
       {
         text: "Seb",
@@ -54,7 +54,7 @@ const gameStates7 = [
       },
       {
         text: "Lyndon",
-        nextState: 8
+        nextState: 80
       },
       {
         text: "Seb",
@@ -84,7 +84,7 @@ const gameStates7 = [
       },
       {
         text: "Lyndon",
-        nextState: 8
+        nextState: 80
       },
       {
         text: "Seb",
@@ -118,7 +118,7 @@ const gameStates7 = [
       },
       {
         text: "Lyndon",
-        nextState: 8
+        nextState: 80
       },
       ],
       image: "./public/Level1/introScene.jpg",
@@ -144,7 +144,7 @@ const gameStates7 = [
       },
       {
         text: "Lyndon",
-        nextState: 8
+        nextState: 80
       },
       {
         text: "Seb",
@@ -174,7 +174,7 @@ const gameStates7 = [
       },
       {
         text: "Lyndon",
-        nextState: 8
+        nextState: 80
       },
       {
         text: "Seb",

@@ -46,104 +46,116 @@ const gameStates8 = [
     image: "./public/street.jpg",
     },
   
-    { //80 NEW - NOT ATTRIBUTED YET
-      story: "'T'as intérêt à pas me mito! Si c'est une autre magouille de shake ce sera pas just elui qui sera dans la merde!'",
+    { //80 Lyndon first quest state
+      story: "Lyndon te dit qu'il a un grave problème... un enemi de la clique s'est mis à hacker tous leurs portables et commence à foutre la merde. Il a besoin de ton aide! Tu peux aller l'aider ou aller au Chat noir pour le rejoindre plus tard",
       options: [{
-          text: "'T'inquiètes Shake m'a dit que tout était bon! tu verras' - Rendre le portable et partir au Chat noir",
-          nextState: 39
-        },
-      ],
-      image: "./public/Level2/mafiaPic.jpg",
+        text: "Rejoindre Lyndon dans son CyberBunker",
+        nextState: 81
+      },
+      {
+        text: "Aller direct au Chat noir",
+        nextState: 79
+      },
+      {
+        text: "Appeler quelqu'un d'autre",
+        nextState: 63
+      },
+    ],
+    image: "./public/Level1/menilmontantMetro.jpg",
     },
   
-    { //81
-      story: "Le garde du corps te prends le portable 'T'as intérêt à dire la vérité, ou le patron va être obligé de me demander qui t'es, si tu vois ce que je veux dire'",
+    { //81 
+      story: "tu arrives au CyberBunker de Lyndon : 'Ah, te voilà enfin ! Notre réseau est sous attaque. Le PIGEON a réussi à infiltrer notre système. On a besoin de toi pour reprendre le contrôle'",
       options: [{
-          text: "'Promis je sais rien! - partir au Chat noir",
-          nextState: 39
-        },
-      ],
-      image: "./public/Level2/mafiaPic.jpg",
+        text: "'Comment puis-je aider ?'",
+        nextState: 82
+      },
+      {
+        text: "'OMG ça a l'air beaucoup trop compliqué pour moi ça, je vais au Chat noir, on se rejoint plus tard!'",
+        nextState: 79
+      },
+    ],
+    image: "./public/Level5/lyndon4.png",
     },
   
     { //82
-      story: "Soirée boîte de nuit CONNECTED",
+      story: "'On doit d'abord localiser le point d'entrée du hack. J'ai isolé trois serveurs suspects. Lequel veux-tu examiner en premier ?'",
       options: [{
-          text: "Oui",
-          nextState: 1
+          text: "Serveur Alpha",
+          nextState: 83
         },
         {
-          text: "Non",
-          nextState: 2
+          text: "Serveur Beta",
+          nextState: 84
+        },
+        {
+          text: "Serveur Gamma",
+          nextState: 85
         },
       ],
-      image: "./public/Level2/nightClub.jpg",
+      image: "./public/Level5/lyndon2.png",
     },
   
     { //83
-      story: "Soirée appart CONNECTED",
+      story: "Tu examines le Serveur Alpha, mais ne trouve rien de suspect. - 'Bien tenté, mais il semble que ce ne soit pas le bon serveur. Essayons autre chose'",
       options: [{
-          text: "Oui",
-          nextState: 1
+          text: "Serveur Beta",
+          nextState: 84
         },
         {
-          text: "Non",
-          nextState: 2
+          text: "Serveur Gamma",
+          nextState: 86
         },
       ],
-      image: "./public/Level2/appartGame.jpg",
+      image: "./public/Level5/lyndon2.png",
     },
   
     { //84
-      story: "Concert jazz manouche CONNECTED",
+      story: "Tu examines le Serveur Beta et découvre une faille de sécurité. - 'Excellent ! Tu as trouvé la faille. Maintenant, utilisons-la à notre avantage pour tracer le PIGEON'",
       options: [{
-          text: "Oui",
-          nextState: 1
-        },
-        {
-          text: "Non",
-          nextState: 2
+          text: "Montrer la faille à Lyndon",
+          nextState: 89
         },
       ],
-      image: "./public/Level2/jazzManouche.jpg",
+      image: "./public/Level5/lyndon2.png",
     },
   
     { //85
-      story: "Vous êtes de nouveau posey sur les marches devant l'église de Ménilmontant lorsque soudainement...",
+      story: "Tu examines le Serveur Gamma, mais ne trouve rien de suspect. - 'Bien tenté, mais il semble que ce ne soit pas le bon serveur. Essayons autre chose'",
       options: [{
-          text: "Quoi?! Soudainement quoi ??!!",
-          nextState: 31
+          text: "Serveur Alpha",
+          nextState: 86
+        },
+        {
+          text: "Serveur Beta",
+          nextState: 84
         },
       ],
-      image: "./public/Level1/OmranBiere.png",
+      image: "./public/Level5/lyndon2.png",
     },
   
     { //86
-      story: "LE PIGEON QUI A MARTYRISÉ OMRAN (ET DONT GAB A MÊME CRÉÉ OMOULE SIMULATOR, PRÉCURSEUR DE CE JEU!!)",
+      story: "Tu testes l'autre, mais après deux essais ratés, le  système se bloque par sécurité, PIGEON a donc réussi à nous couper l'accès au serveur",
       options: [{
-          text: "Omoule simulator, hein ? bon osef, de toute on va le goumer ce pigeon",
-          nextState: 32
+          text: "Tenter un contre hack",
+          nextState: 87
         },
         {
-          text: "PAS LUI! ON VA LUI FAIRE SA FÊTE À CE BÂTARD!!",
-          nextState: 32
+          text: "Euh ok, OSEF. Je veux aller au Chat noir!",
+          nextState: 79
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level5/lyndon3.png",
     },
   
     { //87
-      story: "'MAIS MEC TEUSSERIEU LA IL EST IMBATABLE CE PIGEON!!",
+      story: "Tu tentes un hack contre le PIGEON mais ça échoue - le PIGEON arrive à hack la réalité de ce jeu auquel tu es en train de jouer et décide de te tuer",
       options: [{
-          text: "Mais si t'inquiètes, on va le gérer!",
-          nextState: 33
-        },
-        {
-          text: "Bon viens on se casse alors!",
-          nextState: 33
+          text: "Quoi?!...",
+          nextState: 88
         },
       ],
-      image: "./public/Level3/omouleVener.png",
+      image: "./public/Level5/Lyndon1.png",
     },
   ];
   

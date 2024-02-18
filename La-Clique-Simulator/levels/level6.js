@@ -36,9 +36,6 @@ const gameStates6 = [
       story: "À peine la porte du studio franchie, tu es accueilli par une mélodie chaotique mais étrangement accrocheuse. Clément, le sourire aux lèvres, te fait signe de s'approcher. 'Tu arrives juste à temps pour l'enregistrement de notre dernier tube, 'Grilled Cheese Symphony'! Prêt à mettre la main à la pâte? Clément te propose trois instruments insolites : une guitare en forme de baguette, un synthétiseur qui produit des sons de grille-pain",
       options: [{
           text: "Choisir la guitare en forme de baguette",
-          onChoose: () => {
-            addItem("vieille baguette", inventory, () => updateInventory(inventory, inventoryElement));
-          },
           nextState: 58
         },
         {
@@ -50,14 +47,14 @@ const gameStates6 = [
           nextState: 59
         },
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level4/toasterREAL.png",
     },
   
     { //58
       story: "Tu as choisi la vieille baguette : Le son produit est si atroce qu'il déclenche l'alarme incendie, arrosant le studio et ses occupants. la guitare baguette fond avec l'eau, Clement te dit qu'il te rejoins plus tard au Chat noir",
       options: [{
           text: "Ok",
-          nextState: 60
+          nextState: 77
         },
       ],
       image: "./public/Level3/pigeon.png",
@@ -74,13 +71,13 @@ const gameStates6 = [
     },
   
     { //60
-      story: "avant de partir Clement te retient et te demande 'Attends, est ce que tu sais - ADD SMTG FUNNY HERE",
+      story: "avant de partir Clément se penche vers toi, un sourire malicieux éclairant son visage, et te murmure comme s'il partageait le plus grand des secrets : 'Tu vois ce Toaster Portable ? Il a un pouvoir spécial, le pouvoir de 'Toastification' temporelle. Tu actives ce petit bijou quand la soirée devient trop intense, et pouf ! Le temps se fige autour de toi, te laissant savourer un toast magique en paix.",
       options: [{
-          text: "Oui",
+          text: "Quoi, mais qu'est ce que tu racontes ? tu as trop mangé de Toasts mec!",
           nextState: 61
         },
         {
-          text: "Non",
+          text: "...Je le savais!",
           nextState: 62
         },
       ],
@@ -88,9 +85,9 @@ const gameStates6 = [
     },
   
     { //61
-      story: "A REMPLIR -clement reserved state - go chat noir",
+      story: "Mmmh... Tu rigoles, mais tu rigoleras moins quand tu mangeras un de ses toats. Mais pour que ça foncitonne il faut être un peu ivre... enfin, tu verras bien!",
       options: [{
-          text: "Ok",
+          text: "Ok - Aller au Chat noir",
           nextState: 77
         },
       ],
@@ -98,9 +95,9 @@ const gameStates6 = [
     },
   
     { //62
-      story: "A REMPLIR -clement reserved state - go chat noir",
+      story: "'C'est un secret bien gardé, et peu de toasters ont ce pouvoir. Avec des Toasters quantiques viennent de grandes responsabilités, et du chaos... Et du toast.' - Vous croquez tous les deux dans un morceau de toast, contemplant les mystères du cosmos",
       options: [{
-          text: "Ok",
+          text: "Ok ",
           nextState: 77
         },
       ],
@@ -131,7 +128,7 @@ const gameStates6 = [
       },
       {
         text: "Lyndon",
-        nextState: 8
+        nextState: 80
       },
       {
         text: "Seb",

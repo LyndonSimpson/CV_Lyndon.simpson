@@ -41,7 +41,7 @@ const gameStates1 = [{ //0
     },
     {
       text: "Tam",
-      nextState: 1
+      nextState: 90
     },
     {
       text: "Clement",
@@ -49,7 +49,7 @@ const gameStates1 = [{ //0
     },
     {
       text: "Lyndon",
-      nextState: 8
+      nextState: 80
     },
     {
       text: "Seb",
