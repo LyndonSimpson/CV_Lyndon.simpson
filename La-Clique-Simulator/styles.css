@@ -1,6 +1,10 @@
+:root {
+  --neon-color: #00ff00; /* Default neon green color */
+}
+
 body {
     background-color: black;
-    color: #00ff00; /* Neon green color */
+    color: var(--neon-color); /* Neon green color */
     font-family: "Press Start 2P", monospace;
     font-size: 12px;
     line-height: 1.2;
@@ -13,6 +17,8 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
 
 #particles-js {
     position: fixed;
@@ -31,7 +37,7 @@ body {
 #header {
   background-color: #39FF14; /* Green background */
   background-image: url("./public/banner2.jpg");
-  color: #00ff00; /* green text */
+  color: var(--neon-color); /* green text */
   text-align: center; /* Centers the text horizontally */
   padding: 10px 0; /* 10px top and bottom padding, 0 left and right */
   width: 100%; /* Full width */
@@ -65,7 +71,7 @@ body {
 }
 
 #image-section {
-    border: 2px solid #00ff00; /* Neon green border */
+    border: 2px solid var(--neon-color); /* Neon green border */
     padding: 10px;
     margin-top: 10px;
     border-radius: 10px;
@@ -75,7 +81,22 @@ body {
     
     height: 300px; /* Adjust the height according to your image size */
     position: relative;
+    overflow: hidden;
     animation: slide-down 1s ease forwards;
+}
+
+#image-section::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px; /* Offset by the border size */
+  left: -2px; /* Offset by the border size */
+  right: -2px; /* Offset by the border size */
+  bottom: -2px; /* Offset by the border size */
+  border: 2px solid var(--neon-color);
+  border-radius: 10px;
+  pointer-events: none; /* This will ensure that the pseudo-element does not interfere with mouse events */
+  z-index: 1; /* Ensures the border is above the image */
 }
 
 #story, #inventory, #character {
@@ -86,16 +107,19 @@ body {
     animation: slide-right 1s ease forwards;
   }
 
-#image-section img {
-    width: 100%;
-    height: 100%;
+  #image-section img {
+    width: calc(100% + 4px); /* Increase width to allow for overflow under the border */
+    height: calc(100% + 4px); /* Increase height to allow for overflow under the border */
     object-fit: cover;
-    display: none; /* Hide the image by default */
+    position: absolute;
+    top: -2px; /* Offset by the border size */
+    left: -2px; /* Offset by the border size */
+    display: none; /* Keep it hidden by default */
+    z-index: 0; /* Ensures the image is below the pseudo-element border */
 }
 
 #image-section.show-image img {
     display: block; /* Show the image when the 'show-image' class is added */
-    background-color: black;
 }
 
 #story {
@@ -116,9 +140,9 @@ body {
 
 button {
     background-color: black;
-    border: 2px solid #00ff00; /* Neon green border */
+    border: 2px solid var(--neon-color); /* Neon green border */
     border-radius: 10px;
-    color: #00ff00; /* Neon green text */
+    color: var(--neon-color); /* Neon green text */
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 10px;
@@ -143,7 +167,25 @@ button:hover {
   display: flex;
   justify-content: space-around;
   margin: 10px 0;
-  color: blueviolet;
+  color: var(--neon-color);
+}
+
+.status-bar {
+  width: 100%; /* Full width of the container */
+  background-color: #444; /* A darker background for the unfilled portion */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures the inner div does not spill out */
+  display: flex; /* So it fills from left to right and not from center */
+}
+
+.status-bar-fill {
+  width: 0%; /* Start with an empty bar */
+  background-color: var(--neon-color); /* Start with your neon color */
+  height: 20px; /* Height of the filled portion */
+  border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
+    transition: width 1s ease-in-out; /* Smooth transition for the width */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Ensure the text does not wrap */
 }
 
 #health,
@@ -151,6 +193,34 @@ button:hover {
 #stoned {
   font-size: 18px;
   padding: 18px;
+}
+
+/* To add color cycling to the health and drunkness elements bakcground color
+ @keyframes background-color-cycle {
+  0% { background-color: var(--neon-color); }
+  25% { background-color: #ff2d95; }
+  50% { background-color: #02A4D3; }
+  75% { background-color: #ff7f00; }
+  100% { background-color: var(--neon-color); }
+}
+
+.color-cycle {
+  animation: background-color-cycle 8s infinite linear;
+} */
+
+#health-value, #drunkness-value {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  background: #ff2d95;
+  transition: width 0.5s ease;
+  text-align: center;
+}
+
+/* Add a glow effect to the health and drunkness bars */
+#health-value, #drunkness-value {
+  box-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color);
 }
 
 #inventory {
@@ -167,7 +237,7 @@ button:hover {
 }
 
 .item {
-  border: 1px solid #00ff00; /* Neon green color */
+  border: 1px solid var(--neon-color); /* Neon green color */
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
@@ -178,9 +248,26 @@ button:hover {
   justify-content: start; /* Align content to the start if you want text next to the icon */
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+
 .item img {
   width: 30px; /* Adjust based on your preference */
   height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  animation: pulse 2s infinite;
 }
 
 .game-container {
@@ -195,10 +282,16 @@ button:hover {
 
 .game-section {
     flex-basis: calc(50% - 10px);
-    border: 1px solid #00ff00;/* Neon green border */
+    border: 1px solid var(--neon-color);/* Neon green border */
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+}
+
+.game-section:hover {
+  box-shadow: 0 6px 12px rgba(0, 255, 0, 0.4);
+  transition: box-shadow 0.2s ease;
 }
 
 #story {
@@ -230,15 +323,29 @@ button:hover {
 .typewriter {
     overflow: visible;
   white-space: pre-wrap;
-    border-right: 5px solid #00ff00;
+    border-right: 5px solid var(--neon-color);
     animation: typing 0.3s step-end infinite;
+  }
+
+
+  @keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+      opacity: 1;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+      opacity: 0.4;
+    }
+  }
+  
+  .flickering-text {
+    animation: flicker 3s infinite;
   }
 
   /* Create a keyframe animation for the glowing effect */
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 5px #00ff00;
+    box-shadow: 0 0 5px var(--neon-color);
   }
   50% {
     box-shadow: 0 0 10px #33ff33, 0 0 20px #33ff33;
@@ -247,7 +354,6 @@ button:hover {
 
 /* Apply the glowing effect to elements with green borders */
 #image-section,
-.item,
 .game-section {
   animation: glow 1.5s infinite;
 }
@@ -257,7 +363,7 @@ button:hover {
       border-color: transparent;
     }
     50% {
-      border-color: #00ff00;
+      border-color: var(--neon-color);
     }
   }
 

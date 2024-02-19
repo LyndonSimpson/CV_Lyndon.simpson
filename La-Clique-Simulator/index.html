@@ -33,11 +33,21 @@
             <div id="character" class="game-section">
                 <h3>Tes stats :</h3>
                 <div id="character-stats">
-                    <div id="health">Santé : <span id="health-value"></span></div>
-                    <div id="drunkness">Ivresse : <span id="drunkness-value"></span></div>
-                    <!-- <div id="stoned">fonfon : <span id="stoned-value"></span></div>  add this but fix the CSS for responsive - lign them up-->
-                  </div>
+                    <div id="health">
+                        Santé
+                        <div class="status-bar">
+                            <div id="health-value" class="status-bar-fill color-cycle"></div>
+                        </div>
+                    </div>
+                    <div id="drunkness">
+                        Ivresse
+                        <div class="status-bar">
+                            <div id="drunkness-value" class="status-bar-fill color-cycle"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
         <div id="controls">
             <button id="save-game">Sauvegarder</button>

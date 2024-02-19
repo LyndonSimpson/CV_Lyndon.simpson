@@ -5,9 +5,9 @@ import { healthValueElement, drunknessValueElement } from '../game.js';
 const gameStates2 = [
 
   { //11
-    story: "Tu promènes Nala avec Omran, mais Nala s'enfuit vers une ruelle sombre, vous croisez un mysterieux inconnu qui vous donne un armonica en vous disant 'ne le perdez surtout pas, il vous sera utile pour rentrer'",
+    story: "Tu promènes Nala avec Omran, mais Nala s'enfuit vers une ruelle sombre, vous croisez un mysterieux inconnu qui vous dit avoir reconnu son vieil ami dans le regard de Nala, il veut vous offrir son harmonica qui appartenait à son ami",
     options: [{
-        text: "Tu acceptes l'armonica",
+        text: "Tu acceptes l'harmonica",
         nextState: 12,
         onChoose: () => {
           addItem({ name: "harmonica", icon: "./public/items/harmonica.png" });
@@ -16,7 +16,7 @@ const gameStates2 = [
 
       },
       {
-        text: "tu refuses l'armonica",
+        text: "tu refuses l'harmonica",
         nextState: 14
       },
     ],
@@ -24,7 +24,7 @@ const gameStates2 = [
   },
 
   { //12
-    story: "Tu reçois un armonica, tu ne sais pas quoi en faire donc tu le mets dans ton sac. Vous retournez vous poser",
+    story: "Tu reçois un harmonica, tu ne sais pas quoi en faire donc tu le mets dans ton sac. Vous retournez vous poser",
     options: [{
         text: "OK",
         nextState: 30
@@ -64,7 +64,7 @@ const gameStates2 = [
   },
 
   { //14
-    story: "Tu refuses l'armonica car cette personne te parraissait trop chelou. Vous retournez vous poser",
+    story: "Tu refuses l'harmonica car cette personne te parraissait trop chelou. Vous retournez vous poser",
     options: [{
         text: "Ok",
         nextState: 30
