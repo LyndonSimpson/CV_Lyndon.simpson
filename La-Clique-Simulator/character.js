@@ -39,18 +39,17 @@ class Character {
     const healthPercentage = (player.health / player.maxHealth) * 100;
     const drunknessPercentage = (player.drunkness / player.maxDrunkness) * 100;
 
-    // Assuming player.maxHealth and player.maxDrunkness are the maximum values for health and drunkness
     const healthBar = document.getElementById('health-value');
     const drunknessBar = document.getElementById('drunkness-value');
 
-    // Update the width of the bars
     healthBar.style.width = `${healthPercentage}%`;
     drunknessBar.style.width = `${drunknessPercentage}%`;
 
-    // Update the text content or any other attributes as necessary
-    // You could also add text inside the bars if needed
-    // healthBar.textContent = `${player.health} / ${player.maxHealth}`;
-    // drunknessBar.textContent = `${player.drunkness} / ${player.maxDrunkness}`;
+    if (player.drunkness >= 100) {
+        document.body.classList.add('drunkness-sway');
+    } else {
+        document.body.classList.remove('drunkness-sway');
+    }
 }
 
 // Call this function whenever the health or drunkness stats need to be updated

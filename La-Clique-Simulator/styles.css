@@ -188,6 +188,19 @@ button:hover {
     white-space: nowrap; /* Ensure the text does not wrap */
 }
 
+@keyframes sway {
+  0%, 100% {
+      transform: rotate(-1deg);
+  }
+  50% {
+      transform: rotate(1deg);
+  }
+}
+
+.drunkness-sway {
+  animation: sway 3s ease-in-out infinite;
+}
+
 #health,
 #drunkness,
 #stoned {
