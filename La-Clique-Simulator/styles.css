@@ -195,7 +195,6 @@ button:hover {
   padding: 18px;
 }
 
-/* To add color cycling to the health and drunkness elements bakcground color
  @keyframes background-color-cycle {
   0% { background-color: var(--neon-color); }
   25% { background-color: #ff2d95; }
@@ -206,7 +205,7 @@ button:hover {
 
 .color-cycle {
   animation: background-color-cycle 8s infinite linear;
-} */
+} 
 
 #health-value, #drunkness-value {
   display: inline-block;
