@@ -142,7 +142,7 @@ const gameStates5 = [
       options: [{
           text: "Ok",
           onChoose : () => {
-            addItem({ name: "cruiser", icon: "./public/items/cruiser.png" });
+            addItem({ name: "cruiser", icon: "./public/items/cruiser.png", description: "Cruiser de la marque GLOBE noir avec des rayures jaunes et bleues. Il sent le neuf!" });
             updateInventory();
           },
           nextState: 76

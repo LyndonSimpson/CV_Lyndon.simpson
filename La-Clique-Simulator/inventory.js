@@ -27,13 +27,22 @@ function updateInventory() {
     img.src = item.icon;
     img.alt = item.name;
     img.style.width = "50px"; // Adjust size as needed
-    img.style.height = "auto";
 
     const text = document.createTextNode(` ${item.name}`);
     div.appendChild(img);
     div.appendChild(text);
+    div.addEventListener('click', () => showModal(item));
     inventoryElement.appendChild(div);
   });
+}
+
+function showModal(item) {
+  // Set the content of the modal
+  document.getElementById('modal-image').src = item.icon;
+  document.getElementById('modal-description').textContent = item.description; // Assuming each item has a description property
+
+  // Display the modal
+  document.getElementById('item-modal').style.display = 'block';
 }
 
 function getInventory() {

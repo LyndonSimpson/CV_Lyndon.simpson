@@ -13,7 +13,7 @@ const gameStates1 = [{ //0
       text: "Non",
       nextState: 2,
       onChoose: () => { // example of how to change all addItem moments : the link for BG removal : works only with png, not first google link!
-        addItem({ name: "'I gave up' T-shirt", icon: "./public/items/shirt.png" });
+        addItem({ name: "'I gave up' T-shirt", icon: "./public/items/shirt.png", description: "Tu n'as même pas essayé... Mais tu as au moins gagné ce T-shirt!" });
         updateInventory();
       },
     },
@@ -117,7 +117,7 @@ const gameStates1 = [{ //0
       text: "Je décide de le garder pour moi, il est ebaucoup trop beau!",
       nextState: 6,
       onChoose: () => {
-        addItem({ name: "funky médiator", icon: "./public/items/pick.png" });
+        addItem({ name: "funky médiator", icon: "./public/items/pick.png", description: "Ce médiator psychedélique est vraiment très joli à regarder... On pourrait presque s'y perdre..." });
         updateInventory();
       },
     },
@@ -178,7 +178,7 @@ const gameStates1 = [{ //0
       text: "Je le prends pour voir si je peux retrouver trouver à qui il appartien après la pièce",
       nextState: 10,
       onChoose: () => {
-        addItem({ name: "portable inconnu", icon: "./public/items/phone.png" });
+        addItem({ name: "portable inconnu", icon: "./public/items/phone.png", description: "Mmmmh... Je me demande à qui appartient ce téléphone!" });
         updateInventory();
       },
     },

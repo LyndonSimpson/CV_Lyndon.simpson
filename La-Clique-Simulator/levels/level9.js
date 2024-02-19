@@ -9,7 +9,7 @@ const gameStates9 = [
       options: [{
           text: "Ok",
           onChoose: () => {
-            addItem({ name: "'I died' T-shirt", icon: "./public/items/shirt1.png" });
+            addItem({ name: "'I died' T-shirt", icon: "./public/items/shirt1.png", description: "RIP..." });
             updateInventory();
           },
           nextState: 0
@@ -23,7 +23,7 @@ const gameStates9 = [
       options: [{
           text: "Accepter le disque-dur et aller au Chat noir",
           onChoose: () => {
-            addItem({ name: "disque-dur", icon: "./public/items/drive.png" });
+            addItem({ name: "disque-dur", icon: "./public/items/drive.png", description: "Ce disque-dur contient des données sensibles sur la clique, ne le laisse pas filer entre de mauvaises mains (oui, surtout PIGEON)!" });
             updateInventory();
           },
           nextState: 79

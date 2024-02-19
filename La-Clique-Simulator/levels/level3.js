@@ -37,7 +37,7 @@ const gameStates3 = [
       options: [{
           text: "'Je connais pas Shake je vous jure, on m'a donné ce portable au théâtre!' - rendre portable",
           onChoose : () => {
-            removeItem({ name: "portable inconnu", icon: "./public/items/phone.png" });
+            removeItem({ name: "portable inconnu", icon: "./public/items/phone.png", description: "Mmmmh... Je me demande à qui appartient ce téléphone!" });
             updateInventory();
           },
           nextState: 25
@@ -45,7 +45,7 @@ const gameStates3 = [
         {
           text: "MENTIR 'Ok, Shake m'a donné son portable et m'a dit qu'il partai se cacher chez ses parents, je veux pas d'emmerdes, volà le portable' - rendre portable",
           onChoose : () => {
-            removeItem({ name: "portable inconnu", icon: "./public/items/phone.png" });
+            removeItem({ name: "portable inconnu", icon: "./public/items/phone.png", description: "Mmmmh... Je me demande à qui appartient ce téléphone!" });
             updateInventory();
           },
           nextState: 26

@@ -41,7 +41,7 @@ const gameStates6 = [
         {
           text: "Choisir le synthé grille-pain",
           onChoose: () => {
-            addItem({ name: "funky toaster", icon: "./public/items/toaster.png" });
+            addItem({ name: "funky toaster", icon: "./public/items/toaster.png", description: "En plus d'être un instrument de musique unique au monde, ce toaster, parait-il, possède le pouvoir d'arrêter le temps pour profiter d'un toast. Mais qui peut bien croire ça?" });
             updateInventory();
           },
           nextState: 59

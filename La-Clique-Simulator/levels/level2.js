@@ -10,7 +10,7 @@ const gameStates2 = [
         text: "Tu acceptes l'harmonica",
         nextState: 12,
         onChoose: () => {
-          addItem({ name: "harmonica", icon: "./public/items/harmonica.png" });
+          addItem({ name: "harmonica", icon: "./public/items/harmonica.png", description: "Cet harmonica semblait avoir une énorme valeur sentimentale pour un inconnu dans la rue. si on l'observe de près on peut y lire une inscription gravée : 'MOUSTAFA 4EVER'" });
           updateInventory();
         },
 
