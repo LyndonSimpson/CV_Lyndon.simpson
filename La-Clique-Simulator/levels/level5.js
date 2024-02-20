@@ -69,7 +69,7 @@ const gameStates5 = [
         {
           text: "Lui proposer de faire la course avec lui pour le motiver (tu as un coup de folie)",
           onChoose: () => {
-            addItem({ name: "'I died' T-shirt", icon: "./public/items/shirt1.png" });
+            addItem({ name: "'I died' T-shirt", icon: "./public/items/shirt1.png", description: "RIP..." });
             updateInventory();
           },
           nextState: 52

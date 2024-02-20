@@ -296,6 +296,7 @@ button:hover {
 
 .game-section {
     flex-basis: calc(50% - 10px);
+    background-color: rgba(0, 128, 0, 0.103); 
     border: 1px solid var(--neon-color);/* Neon green border */
     border-radius: 10px;
     padding: 10px;
