@@ -125,6 +125,7 @@ body {
 #story {
     margin-bottom: 20px;
     background-color: black;
+    box-shadow: inset 3px 0px 3px 3px rgba(0, 128, 0, 0.459);
 }
 
 #options {
@@ -163,6 +164,7 @@ button:hover {
 #character, #enemy {
     margin-top: 30px;
     background-color: black;
+    box-shadow: inset 4px 1px 4px 4px rgba(0, 128, 0, 0.459);
 }
 
 #character-stats {
@@ -222,7 +224,17 @@ button:hover {
   animation: background-color-cycle 8s infinite linear;
 } 
 
-#health-value, #drunkness-value {
+#health-value {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  background: green;
+  transition: width 0.5s ease;
+  text-align: center;
+}
+
+#drunkness-value {
   display: inline-block;
   width: 100px;
   height: 20px;
@@ -365,6 +377,7 @@ button:hover {
   border-radius: 15px;
   width: 80%; /* Could be more or less, depending on screen size */
   position: relative;
+  box-shadow: inset 4px 1px 4px 4px rgba(0, 128, 0, 0.459);
 }
 
 /* The Close Button */
