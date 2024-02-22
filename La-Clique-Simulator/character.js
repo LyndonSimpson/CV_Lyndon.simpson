@@ -58,7 +58,7 @@ updateCharacterStats();
   function getColorBasedOnDrunkness(drunknessLevel) {
     let color;
     if (drunknessLevel <= 20) {
-        color = '#00ff00'; // Neon Green
+        color = '#00ff00'; // Neon Green : #00ff00
     } else if (drunknessLevel <= 40) {
         color = '#00BFFF'; // Electric Blue
     } else if (drunknessLevel <= 60) {

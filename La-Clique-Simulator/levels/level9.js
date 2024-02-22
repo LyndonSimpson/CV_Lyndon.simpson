@@ -36,32 +36,32 @@ const gameStates9 = [
       image: "./public/Level5/Lyndon5.png",
     },
   
-    { //90 Tamara first state of first quest here :
-      story: "TAM PHONE CALL CONNECT",
+    { //90 Namyria quest here:
+      story: "Le chien est un petit French Bulldog, à votre grande surprise à tous les trois il se met à parler : 'Bonjour hoomains, je m'appelle Nymiria! j'ai appeler attiré votre attention car j'ai besoin de votre aide... s'il vous plaît, c'est d'un importance capitale!!!",
       options: [{
-      text: "'vazy j'arrive, je suis dans le coin'",
-      nextState: 11
+      text: "'...de quoi as tu besoin?'",
+      nextState: 91
     },
     {
-      text: "'viens on va plutôt direct au chat noir pour boire une bière ?'",
-      nextState: 78
-    },
-    {
-      text: "Appeler quelqu'un d'autre",
-      nextState: 63
-    },
+      text: "'euh, un chien qui parle... viens on retourne se poser Omran!' - retourner se poser",
+      nextState: 30
+    }
     ], // Empty options, as the game ends here
-    image: "./public/Level1/menilmontantMetro.jpg",
+    image: "./public/Level6/frenchie4.png",
     },
   
-    { //91 unused
-      story: "'BLASPHÈME - 1 an de maleur de caca de pigeon : mes confrères vous arroseront - dans un an je reviens tester votre âme' Le pigeon dispraît dans un nuage de fumée - *POOF* - Omran rentre chez lui pour le moment, il a besoin de se calmer après avoir encore rencontré son nemesis",
+    { //91 Nymiria state 2
+      story: "NYMIRIA STATE 2",
       options: [{
-          text: "Aller au chat noir!",
+          text: "Mmmh... Ok, qu'est ce qu'on doit faire ?",
           nextState: 39
         },
+        {
+          text: "'Pas le temps!' - retourner se poser",
+          nextState: 30
+        }
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level6/frenchie6.png",
     },
   
     { //92

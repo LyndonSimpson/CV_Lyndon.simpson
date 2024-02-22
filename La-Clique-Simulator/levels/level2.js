@@ -5,26 +5,25 @@ import { healthValueElement, drunknessValueElement } from '../game.js';
 const gameStates2 = [
 
   { //11
-    story: "Tu promènes Nala avec Omran, mais Nala s'enfuit vers une ruelle sombre, vous croisez un mysterieux inconnu qui vous dit avoir reconnu son vieil ami dans le regard de Nala, il veut vous offrir son harmonica qui appartenait à son ami",
+    story: "Tu promènes Nala avec Omran, mais Nala s'enfuit vers une ruelle sombre, vous croisez un mysterieux inconnu qui vous dit avoir reconnu son vieil ami dans le regard de Nala, il veut vous offrir son harmonica qui appartenait à son ami. Mais pendant qu'il vous parle Nala voit un autre chien et tire sur la laisse!",
     options: [{
-        text: "Tu acceptes l'harmonica",
+        text: "Tu acceptes l'harmonica et ignorer l'autre chien",
         nextState: 12,
         onChoose: () => {
           addItem({ name: "harmonica", icon: "./public/items/harmonica.png", description: "Cet harmonica semblait avoir une énorme valeur sentimentale pour un inconnu dans la rue. si on l'observe de près on peut y lire une inscription gravée : 'MOUSTAFA 4EVER'" });
           updateInventory();
         },
-
       },
       {
-        text: "tu refuses l'harmonica",
-        nextState: 14
+        text: "Suivre Nala vers l'autre chien et ignorer l'inconnu",
+        nextState: 90
       },
     ],
     image: "./public/Level1/OmranBiere.png",
   },
 
   { //12
-    story: "Tu reçois un harmonica, tu ne sais pas quoi en faire donc tu le mets dans ton sac. Vous retournez vous poser",
+    story: "Tu reçois un harmonica, tu ne sais pas quoi en faire donc tu le mets dans ton sac. Vous retournez vous poser. Nala ne voit plus l'autre chien",
     options: [{
         text: "OK",
         nextState: 30
@@ -64,7 +63,7 @@ const gameStates2 = [
   },
 
   { //14
-    story: "Tu refuses l'harmonica car cette personne te parraissait trop chelou. Vous retournez vous poser",
+    story: "Tu refuses l'harmonica car cette personne te parraissait trop chelou. Vous retournez vous poser. Nala ne voit plus l'autre chien",
     options: [{
         text: "Ok",
         nextState: 30

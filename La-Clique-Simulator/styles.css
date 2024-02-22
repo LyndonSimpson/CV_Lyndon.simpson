@@ -1,9 +1,11 @@
 :root {
   --neon-color: #00ff00; /* Default neon green color */
+  --neon-blue: #02A4D3;
 }
 
 body {
-    background-color: black;
+    background-image: url("./public/rooftops.png");
+    overflow: none;
     color: var(--neon-color); /* Neon green color */
     font-family: "Press Start 2P", monospace;
     font-size: 12px;
@@ -36,7 +38,6 @@ body {
 
 #header {
   background-color: #39FF14; /* Green background */
-  background-image: url("./public/banner2.jpg");
   color: var(--neon-color); /* green text */
   text-align: center; /* Centers the text horizontally */
   padding: 10px 0; /* 10px top and bottom padding, 0 left and right */
@@ -129,6 +130,7 @@ body {
 }
 
 #options {
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -213,15 +215,15 @@ button:hover {
 }
 
  @keyframes background-color-cycle {
-  0% { background-color: var(--neon-color); }
+  0% { background-color: #ff2d95; }
   25% { background-color: #ff2d95; }
   50% { background-color: #02A4D3; }
   75% { background-color: #ff7f00; }
-  100% { background-color: var(--neon-color); }
+  100% { background-color: #ff2d95; }
 }
 
 .color-cycle {
-  animation: background-color-cycle 8s infinite linear;
+  animation: background-color-cycle 30s infinite linear;
 } 
 
 #health-value {
@@ -471,6 +473,7 @@ button:hover {
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+
     #game {
         width: 90%;
     }
@@ -478,6 +481,7 @@ button:hover {
     /* Increase font size for better readability on mobile devices */
     body {
         font-size: 14px; /* Increase the font size to 24px or adjust it to your preference */
+        background-image: url("./public/backgrounds/bg4.png");
     }
 
     /* Adjust button width for mobile devices */
