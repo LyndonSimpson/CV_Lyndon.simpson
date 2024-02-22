@@ -37,7 +37,6 @@ body {
 }
 
 #header {
-  background-color: #39FF14; /* Green background */
   color: var(--neon-color); /* green text */
   text-align: center; /* Centers the text horizontally */
   padding: 10px 0; /* 10px top and bottom padding, 0 left and right */
