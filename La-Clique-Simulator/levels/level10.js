@@ -4,104 +4,62 @@ import { healthValueElement, drunknessValueElement } from '../game.js';
 
 
 const gameStates10 = [{ //99
-  story: "es-tu prêt pour ta soirée virtuelle dans La clique Simulator ?",
+  story: "Vous achetez la tarte à la patate douce et aux noix de pécan. Mais Namyria à l'air un peu triste, elle n'arrive pas à reconnaître l'odeur de la tarte : 'j'ai mentis, je voulais juste mon snack préféré une foi de plus aujourd'hui! Mais cette tarte fera aussi l'affaire!' - Vous étiez bien tombé dans le piège! Nymiria s'en va en courant, tarte au bec",
   options: [{
-      text: "Oui",
-      nextState: 1
-    },
-    {
-      text: "Non",
-      nextState: 2,
-      onChoose: () => { // example of how to change all addItem moments : the link for BG removal : works only with png, not first google link!
-        addItem({ name: "'I gave up' T-shirt", icon: "./public/items/shirt.png" });
-        updateInventory();
-      },
+      text: "Retourner se poser...",
+      nextState: 30
     },
   ],
-  image: "./public/Level1/HomeScreen.jpg",
+  image: "./public/Level7/frenchie7.png",
 },
 {//100
-  story: "C'est vendredi, après une semaine de taff bien dur, t'as envie de sortir faire la fête. qui veux tu appeler?",
+  story: "'QOUI!!?? JE VOUS PROPOSE MA FAMEUSE TARTE DONT LA RECETTE EST UNE TRADITION FAMILIALE ET VOUS VOULEZ VOIR DES TARTES AILLEURS!!?? SORTEZ!",
   options: [{ // need 3 branching themes here
-      text: "Omran",
-      nextState: 3, //
+      text: "sortir...",
+      nextState: 104 //
       //onChoose: () => {
         //addItem("Glowing green orb", inventory, () => updateInventory(inventory, inventoryElement));
         //player.loseHealth(10);
         //updateCharacterInfo(healthValueElement, drunknessValueElement);
      // },
-    },
-    {
-      text: "Gabriel",
-      nextState: 4
-    },
-    {
-      text: "Pierre",
-      nextState: 8
-    },
-    {
-      text: "Tam",
-      nextState: 90
-    },
-    {
-      text: "Clement",
-      nextState: 56
-    },
-    {
-      text: "Lyndon",
-      nextState: 80
-    },
-    {
-      text: "Seb",
-      nextState: 40
-    },
+    }
   ],
-  image: "./public/Level1/introScene.jpg",
-  music: "./music/captain.mp3",
+  image: "./public/Level7/frenchie3.png",
 },
 {//101
-  story: "GAME OVER!",
+  story: "La boutique rayonne de milles tartes! Nymiria semble reconnaître l'odeur distinctive des tartes à la patate douce! Mission accomplie - vous lui payez sa tarte favorite",
   options: [
     {
-      text: "OK",
-      nextState: 0
+      text: "'On a trouvé tes tartes! es tu contente ??'",
+      nextState: 102
     }
   ], // Empty options, as the game ends here
-  image: "./public/gameOver.jpg",
-  music: "./music/merde.mp3",
+  image: "./public/Level7/frenchie2.jpg",
 },
 {//102
-  story: "tu appelles Omran, il te propose de le rejoindre chez lui pour ballader Nala",
+  story: "'Bande d'humains imbéciles, vous êtes tombés dans le piège, je n'avais pas besoin des tartes pour retrouver mes parents, je voulais juste m'offrir mon snack préféré une fois de plus!!' - Nymiria part en courant la tarte au bec... Vous vous êtes fait complètement avoir",
   options: [{
-      text: "'vazy j'arrive, je suis dans le coin'",
-      nextState: 11
-    },
-    {
-      text: "'viens on va plutôt direct au chat noir pour boire une bière ?'",
-      nextState: 73
-    },
-    {
-      text: "Appeler quelqu'un d'autre",
-      nextState: 63
+      text: "retourner se poser...",
+      nextState: 30
     },
   ], // Empty options, as the game ends here
-  image: "./public/Level1/menilmontantMetro.jpg",
+  image: "./public/Level7/frenchie7.png",
 },
 // Add more game states here
 
-{//103
-  story: "Gabriel décroche, il te dit 'j'ai une jam à l'Atla vers Pigalle, viens stuve! Sinon on se rejoint au Chat noir un peu après!'",
+{//103 NESxT EMPTY STATE AFTER NYMIRIA QUEST - FOR TAM first state
+  story: "Tamara décroche, elle te dit 'j'ai une urgence chez le fleuriste, quelqu'un nous a volé nos roses et c'est la fête des mères demain!... Tiens, tu pourrais aller récupérer des roses chez notre distributeur, il est à Montreuil, tu pourrais nous dépanner ? Tu nous sauverais la vie!'",
   options: [{
-      text: "Aller à la jam à Pigalle",
+      text: "Accepter d'aller chercher les roses",
       onChoose: () => {
         player.gainDrunkness(40);
         updateCharacterInfo(healthValueElement, drunknessValueElement);
       },
-      nextState: 5,
+      nextState: 105
     },
     {
       text: "Aller direct au Chat noir",
-      nextState: 74
+      nextState: 78
     },
     {
       text: "Appeler quelqu'un d'autre",
@@ -112,36 +70,35 @@ const gameStates10 = [{ //99
 },
 
 {//104
-  story: "Tu arrives à l'Atla pour la jam, la musique est tellement buen que tu t'enjailles un petit peu trop en buvant du rhum (tu bois 4 verres de rhum et prends 40 d'ivresse directù! po po po! bourré, tu trouves un médiator de gratte vraiment unique par terre, il appartient peut être à quelqu'un, est ce que tu le gardes ou demande autour de toi à quel musicien il appartient ?",
+  story: "Un autre client vous a entendu et connaît la meilleur boutique de tartes, dehors ils vous donne son nom: 'tarte-up nation'!",
   options: [{
-      text: "Je décide de le garder pour moi, il est ebaucoup trop beau!",
-      nextState: 6,
-      onChoose: () => {
-        addItem({ name: "funky médiator", icon: "./public/items/pick.png" });
-        updateInventory();
+      text: "Aller à tarte-up nation",
+      nextState: 101
       },
-    },
-    {
-      text: "Je vois un guitariste qui cherche un truc par terre, alors je lui montre le médiator",
-      nextState: 7
-    },
   ],
-  image: "./public/Level1/jamArrival.jpg",
+  image: "./public/Level7/frenchie6.png",
 },
 
-{//105
-  story: "tu gardes le joli médiator et tu pars pour le Chat noir avec Gabriel, mais il doit faire un détour avant de te rejoindre au Chat noir donc tu y vas tout seul!",
+{// TAM quest state 2 - go get the roses
+  story: "Tu arrives à l'adresse envoyée. ROSES RECUP QUEST",
   options: [{
-      text: "Ok",
-
-      nextState: 74
+      text: "1",
+      nextState: 106
     },
+    {
+      text: "2",
+      nextState: 107
+    },
+    {
+      text: "3",
+      nextState: 108
+    }
   ],
   image: "./public/Level1/guitarPick.jpg",
 },
 
 {//106
-  story: "'Mec cimer, ce médiator m'a été offert par mon père'. Le guitariste t'invite à boire encore du rhum avec lui pour te remercier (tu te manges 20 d'ivresse en plus)",
+  story: "TAM STATE 2",
   options: [{
       text: "KO",
       onChoose: () => {
@@ -155,7 +112,7 @@ const gameStates10 = [{ //99
 },
 
 {//107
-  story: "Pierre te propose de le rejoindre voir une pièce de théâtre sur les Grands boulevards ou de le rejoindre un peu plus tard au Chat noir",
+  story: "TAM STATE 3",
   options: [{
       text: "Tu décides d'aller voir la pièce de théâtre avec Pierre",
       nextState: 9
@@ -173,7 +130,7 @@ const gameStates10 = [{ //99
 },
 
 {//108
-  story: "Le spectateur à ta gauche te dit que tu as fait tomber ton téléphone, ce n'est pas le tien, et personne semble en être le propriétaire autour de toi, est ce que tu le prends ?",
+  story: "TAM STATE 4",
   options: [{
       text: "Je le prends pour voir si je peux retrouver trouver à qui il appartien après la pièce",
       nextState: 10,

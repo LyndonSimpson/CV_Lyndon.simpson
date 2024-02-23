@@ -1,6 +1,20 @@
 import { addItem, updateInventory } from '../inventory.js';
 import { player, updateCharacterInfo } from '../character.js';
 import { healthValueElement, drunknessValueElement } from '../game.js';
+const roulette = () => {
+  const number = Math.floor(Math.random() * 6);
+  
+  const bullet = 3;
+  
+  if (number == bullet) {
+      const s = 2;
+      return s;
+  } else {
+      const s = 1;
+      return s;
+  }
+  }
+
 
 const gameStates9 = [
 
@@ -51,10 +65,10 @@ const gameStates9 = [
     },
   
     { //91 Nymiria state 2
-      story: "NYMIRIA STATE 2",
+      story: "Je m'appelle Nymiria! Il faut absolument que je récupère mes snacks, ils me ramèneront à mes parents grâce à leur odeur!",
       options: [{
-          text: "Mmmh... Ok, qu'est ce qu'on doit faire ?",
-          nextState: 39
+          text: "Mmmh... Ok, comment est ce qu'on peut les trouver ?",
+          nextState: 92
         },
         {
           text: "'Pas le temps!' - retourner se poser",
@@ -64,106 +78,111 @@ const gameStates9 = [
       image: "./public/Level6/frenchie6.png",
     },
   
-    { //92
-      story: "'il vous portera bonheur dans votre quête à la déglingue ce soir, bon courage!' - Le pigeon disparaît dans un nuage de fumée *POOF* - Omran a besoin d'aller se calmer chez lui après cette rencontre avec son nemesis...",
+    { //92 
+      story: "Ils les trouvaient à Bastille, c'est de la tarte à la patate douce. Mais il faut que ce soit la bonne tarte!",
       options: [{
-          text: "Aller au chat noir!",
-          nextState: 39
+          text: "Ok, en route pour Bastille!",
+          nextState: 93
         },
+        {
+          text: "Regarder sur internet",
+          nextState: 94
+        }
       ],
-      image: "./public/Level3/pigeon.png",
+      image: "./public/Level6/frenchie2.png",
     },
   
     { //93
-      story: "que veux tu boire?",
+      story: "Vous arrivez à Bastille, mais vous ne savez pas où se trouvent les tartes! Que faire...",
       options: [{
-          text: "Bière",
+          text: "Aller à la boulangerie la plus proche",
           onChoose: () => {
             player.gainDrunkness(10);
             updateCharacterInfo(healthValueElement, drunknessValueElement);
           },
-          nextState: 16
+          nextState: 95
         },
         {
-          text: "Vin",
+          text: "Marcher un peu pour chercher des tartes",
           onChoose: () => {
             player.gainDrunkness(10);
             updateCharacterInfo(healthValueElement, drunknessValueElement);
           },
-          nextState: 17
+          nextState: 96
         },
         {
-          text: "Calva",
+          text: "Aller au Franprix",
           onChoose: () => {
             player.gainDrunkness(20);
             updateCharacterInfo(healthValueElement, drunknessValueElement);
           },
-          nextState: 18
+          nextState: 97
         },
       ],
-      image:"./public/Level3/menu.png",
+      image:"./public/Level6/frenchie1.png",
     },
   
     { //94
-      story: "tu te mets en route pour le chat noir, tranquilement, tu marches rue JPT",
+      story: "tu regardes sur internet, il y a 2 boutiques à Bastille qui vendent des tartes à la patate douce selon Gogole maps",
       options: [{
-          text: "Ok",
-          nextState: 13
+          text: "Ok - en route pour Bastille",
+          nextState: 98
         },
       ],
-      image: "./public/street.jpg",
+      image: "./public/Level7/frenchie5.png",
     },
   
     { //95
-      story: "Seb te propose d'aller se poser aux buttes chaumont ou de le rejoindre plus tard au Chat noir",
+      story: "Le boulanger vous propose sa fameuse tarte à la patate douce et aux noix de pécan!",
       options: [{
-          text: "Ok, le rejoindre aux buttes",
-          nextState: 41
+          text: "Ok, ça fera l'affaire!",
+          nextState: 99
         },
         {
-          text: "Aller direct au Chat noir",
-          nextState: 39
+          text: "Faire ecore un ou deux patés de maison à la recherche d'une tarte",
+          nextState: 96
         },
         {
-          text: "Appeler quelqu'un d'autre",
-          nextState: 63
+          text: "demander si le boulanger ne connaît pas une bonne boutique de tartes",
+          nextState: 100
         },
       ],
-      image: "./public/Level1/menilmontantMetro.jpg",
+      image: "./public/Level7/frenchie6.png",
     },
   
     { //96
-      story: "Tu arrives ux buttes chaumont où tu captes Seb. Vous vous posez en haut du belvédère et vous admirez la vue",
+      story: "Vous tombez sur une boutique de tartes qui s'appelle 'tarte-up nation'!",
       options: [{
-          text: "Ok",
-          nextState: 42
+          text: "Entrer dans la boutique",
+          nextState: 101
         },
       ],
-      image: "./public/Level3/buttes.png",
+      image: "./public/Level7/frenchie3.png",
     },
   
     { //97
-      story: "Pendant que vous êtez posés tout en haut de la butte, quelqu'un remarque que Seb a un skate. Cette personne viet lui donner un flyer. 'Eh mec, regarde ça'",
+      story: "Le Franprix ne vend pas de tartes...",
       options: [{
-          text: "Prendre le flyer",
-          nextState: 43
+          text: "Marcher encore un peu pour trouver une tarte!",
+          nextState: 96
         },
       ],
       image: "./public/Level4/buttes2.jpg",
     },
   
     { //98
-      story: "COMPET DE SKATE AVEC INSCRIPTION LIBRE : descente de la rue de Ménilmontant - Tu vois que Seb hésites à y aller",
-      options: [{
-          text: "On devrait y aller",
-          nextState: 44
+      story: "Vous arrivez avec Omran, Nala et Nymiria à Bastille, Il y a donc 2 boutiques qui vendent des tartes à la patate douce. Laquelle essayer en premier ?",
+      options: [
+        {
+          text: "Tarte me up",
+          nextState: 103
         },
         {
-          text: "La rue de Ménimontant! bonne chance, ils vont se rétame!",
-          nextState: 44
+          text: "Tarte-up nation",
+          nextState: 101
         },
       ],
-      image: "./public/Level4/flyer.jpg",
+      image: "./public/Level7/frenchie4.png",
     },
   ];
   

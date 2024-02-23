@@ -33,7 +33,7 @@ const gameStates6 = [
     },
   
     { //57
-      story: "À peine la porte du studio franchie, tu es accueilli par une mélodie chaotique mais étrangement accrocheuse. Clément, le sourire aux lèvres, te fait signe de s'approcher. 'Tu arrives juste à temps pour l'enregistrement de notre dernier tube, 'Grilled Cheese Symphony'! Prêt à mettre la main à la pâte? Clément te propose trois instruments insolites : une guitare en forme de baguette, un synthétiseur qui produit des sons de grille-pain",
+      story: "À peine la porte du studio franchie, tu es accueilli par une mélodie chaotique mais étrangement accrocheuse. Clément, le sourire aux lèvres, te fait signe de s'approcher. 'Tu arrives juste à temps pour l'enregistrement de notre dernier tube, 'Grilled Cheese Symphony'! Prêt à mettre la main à la pâte? Clément te propose 2 instruments insolites : une guitare en forme de baguette et un synthétiseur qui produit des sons de grille-pain",
       options: [{
           text: "Choisir la guitare en forme de baguette",
           nextState: 58

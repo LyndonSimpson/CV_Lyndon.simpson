@@ -41,7 +41,7 @@ const gameStates4 = [
       options: [{
           text: "Accepter le ticket de métro sacré du pigeon",
           onChoose: () => {
-            addItem({ name: "vieux ticket de métro", icon: "./public/items/ticket.png", description: "Ce ticket de métro n'est comme aucun que tu as vu avant... Il semble d'être d'une autre époque et pourtant il est en parfait état!" });
+            addItem({ name: "vieux ticket de métro", icon: "./public/items/ticket.png", description: "Ce ticket de métro n'est comme aucun que tu as vu avant... Il semble être d'une autre époque et pourtant il est en parfait état!" });
             updateInventory();
           },
           nextState: 37
