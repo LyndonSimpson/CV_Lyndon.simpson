@@ -47,14 +47,10 @@ const gameStates10 = [{ //99
 },
 // Add more game states here
 
-{//103 NESxT EMPTY STATE AFTER NYMIRIA QUEST - FOR TAM first state
+{//103 FOR TAM first state
   story: "Tamara décroche, elle te dit 'j'ai une urgence chez le fleuriste, quelqu'un nous a volé nos roses et c'est la fête des mères demain!... Tiens, tu pourrais aller récupérer des roses chez notre distributeur, il est à Montreuil, tu pourrais nous dépanner ? Tu nous sauverais la vie!'",
   options: [{
       text: "Accepter d'aller chercher les roses",
-      onChoose: () => {
-        player.gainDrunkness(40);
-        updateCharacterInfo(healthValueElement, drunknessValueElement);
-      },
       nextState: 105
     },
     {
@@ -66,7 +62,7 @@ const gameStates10 = [{ //99
       nextState: 63
     },
   ],
-  image: "./public/Level1/menilmontantMetro.jpg",
+  image: "./public/Level1/egliseMenilmontant.jpg",
 },
 
 {//104
@@ -80,17 +76,17 @@ const gameStates10 = [{ //99
 },
 
 {// TAM quest state 2 - go get the roses
-  story: "Tu arrives à l'adresse envoyée. ROSES RECUP QUEST",
+  story: "Tu arrives à l'adresse envoyée. Mais on te dit qu'elles sont dans un autre entrepot...",
   options: [{
-      text: "1",
+      text: "Aller à la nouvelle adrèsse",
       nextState: 106
     },
     {
-      text: "2",
+      text: "Aller à la boutique de roses d'en face",
       nextState: 107
     },
     {
-      text: "3",
+      text: "dire à Tam qu'on a pas réussi et aller au Chat noir",
       nextState: 108
     }
   ],
@@ -98,31 +94,27 @@ const gameStates10 = [{ //99
 },
 
 {//106
-  story: "TAM STATE 2",
+  story: "tu arrives à la nouvelle adrèsse, RECUP ROSES END QUEST",
   options: [{
-      text: "KO",
-      onChoose: () => {
-        player.gainDrunkness(20);
-        updateCharacterInfo(healthValueElement, drunknessValueElement);
-      },
-      nextState: 74
+      text: "Go to next state",
+      nextState: 107
     },
   ],
   image: "./public/Level1/happyNPC.jpg",
 },
 
 {//107
-  story: "TAM STATE 3",
+  story: "RECUP ROSES END QUEST",
   options: [{
-      text: "Tu décides d'aller voir la pièce de théâtre avec Pierre",
-      nextState: 9
+      text: "Wrong option",
+      nextState: 108
     },
     {
-      text: "tu décides de rejoindre directement Pierre au Chat noir",
+      text: "Right option",
       nextState: 75
     },
     {
-      text: "Appeler quelqu'un d'autre",
+      text: "Joker",
       nextState: 63
     },
   ],
@@ -130,31 +122,31 @@ const gameStates10 = [{ //99
 },
 
 {//108
-  story: "TAM STATE 4",
+  story: "Right option state TAM QUEST",
   options: [{
-      text: "Je le prends pour voir si je peux retrouver trouver à qui il appartien après la pièce",
-      nextState: 10,
-      onChoose: () => {
-        addItem({ name: "portable inconnu", icon: "./public/items/phone.png" });
-        updateInventory();
-      },
+      text: "1",
+      nextState: 1
     },
     {
-      text: "Non, j'insiste que ce n'est pas le mien, pas mon roblème",
-      nextState: 15
+      text: "2",
+      nextState: 1
     },
   ],
   image: "./public/Level1/theatre.jpg",
 },
 
 {//109
-  story: "Tu ranges le téléphone dans ton sac, tu verras plus tard",
+  story: "Tarte me up n'a pas de tartes à la patate douce comme Nymiria les aime, mais ils ont patate douce noix de pécan...",
   options: [{
-      text: "Ok",
-      nextState: 20
+      text: "Acheter cette tarte, ça fera l'affaire!",
+      nextState: 99
+    },
+    {
+      text: "Essayer tarte-up nation!",
+      nextState: 101
     },
   ],
-  image: "./public/Level1/theatre.jpg",
+  image: "./public/Level7/frenchie6.png",
 },
 
 ];

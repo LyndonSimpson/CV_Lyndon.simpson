@@ -1,110 +1,85 @@
-import { addItem, updateInventory } from '../inventory.js';
+import { addItem, updateInventory, getInventory } from '../inventory.js';
 import { player, updateCharacterInfo } from '../character.js';
 import { healthValueElement, drunknessValueElement } from '../game.js';
 
-// TODO FOR ADDING DRUNKNESS CHECKS
-let drunkPass1 = 3;
-function healthPass1check(value) {
-  const drunkness = player.getDrunkness(); // getDrunkness to access the health value
+//TODO : 4 todos below that explain and show each step of adding a item check pass (or fail) depending on item presence
 
-  // checking if drunkness too high for this check
-  if (drunkness > value) {
-    drunkPass1 = 2;
-  } else {
-    drunkPass1 = 3;
-  }
+//TODO 1) Will have to use pass2 for next item check!
+let pass1 = 0;
+
+//TODO 2) this method will have to be ADDED and adapted (pass1 variable to pass2 and correct nextState indexes depending on item presence) in each state file where a check like this happens.
+function pass1check(itemName) {
+    const inventory = getInventory(); // Use the getInventory function to access the inventory array
+
+    // Ensure inventory is properly initialized and is an array
+    if (Array.isArray(inventory)) {
+        // Check if the item is in the inventory
+        const itemExists = inventory.some(item => item.name === itemName);
+        if (itemExists) {
+            pass1 = 112; // Set this to the state number if the item is found
+        } else {
+            pass1 = 113; // Set this to the state number if the item is not found
+        }
+    } else {
+        // Handle the case where inventory is not available
+        console.error("Inventory is undefined or not an array");
+        // Optionally set itemCheck to a default value or handle the error as needed
+    }
 }
 
-const gameStates1 = [{ //0
-  story: "es-tu prêt pour ta soirée virtuelle dans La clique Simulator ?",
-  options: [{
-      text: "Oui",
-      nextState: 1,
-      //onChoose: () => {
-       // healthPass1check(50); //TODO Here the param is the value for the drunkness check pass
-      //},
-    },
-    {
-      text: "Non",
-      nextState: 2,
-      onChoose: () => { // example of how to change all addItem moments : the link for BG removal : works only with png, not first google link!
-        addItem({ name: "'I gave up' T-shirt", icon: "./public/items/shirt.png", description: "Tu n'as même pas essayé... Mais tu as au moins gagné ce T-shirt!" });
-        updateInventory();
+const gameStates11 = [{ //110 USED AS EXAMPLE FOR ITEM CHECK
+    story: "GRAB TEST ITEM",
+    options: [{
+        text: "NO",
+        nextState: 111,
+        onChoose: () => {
+          pass1check("TEST"); //TODO 3) THIS TEST NEEDS TO BE ADDED TO EACH OPTION THAT LEAD TO AN ITEM CHECK OPTION SO THAT THE DECLARED VAR IN THE SAME FILE UPDATES CORRECTLY
+        },
       },
-    },
-  ],
-  image: "./public/Level1/HomeScreen.jpg",
-},
-{//1 -
-  story: "C'est vendredi, après une semaine de taff bien dur, t'as envie de sortir faire la fête. qui veux tu appeler?",
-  options: [{ // need 3 branching themes here
-      text: "Omran",
-      nextState: 3// () => drunkPass1, // TODO this is to make next state dynamic depending on drunkness check result set in variable 
-      //onChoose: () => {
-        //addItem("Glowing green orb", inventory, () => updateInventory(inventory, inventoryElement));
-        //player.loseHealth(10);
-        //updateCharacterInfo(healthValueElement, drunknessValueElement);
-     // },
-    },
-    {
-      text: "Gabriel",
-      nextState: 4
-    },
-    {
-      text: "Pierre",
-      nextState: 8
-    },
-    {
-      text: "Tam",
-      nextState: 103
-    },
-    {
-      text: "Clement",
-      nextState: 56
-    },
-    {
-      text: "Lyndon",
-      nextState: 80
-    },
-    {
-      text: "Seb",
-      nextState: 40
-    },
-  ],
-  image: "./public/Level1/introScene.jpg",
-  music: "./music/captain.mp3",
-},
-{//2
-  story: "GAME OVER!",
-  options: [
-    {
-      text: "OK",
-      nextState: 0
-    }
-  ], // Empty options, as the game ends here
-  image: "./public/gameOver.jpg",
-  music: "./music/merde.mp3",
-},
-{//3
-  story: "tu appelles Omran, il te propose de le rejoindre chez lui pour ballader Nala",
-  options: [{
-      text: "'vazy j'arrive, je suis dans le coin'",
-      nextState: 11
-    },
-    {
-      text: "'viens on va plutôt direct au chat noir pour boire une bière ?'",
-      nextState: 73
-    },
-    {
-      text: "Appeler quelqu'un d'autre",
-      nextState: 63
-    },
-  ], // Empty options, as the game ends here
-  image: "./public/Level1/menilmontantMetro.jpg",
-},
+      {
+        text: "TAKE TEST ITEM",
+        nextState: 111,
+        onChoose: () => {
+          addItem({ name: "TEST", icon: "./public/items/shirt.png", description: "Tu n'as même pas essayé... Mais tu as au moins gagné ce T-shirt!" });
+          updateInventory();
+          pass1check("TEST");
+        },
+      },
+    ],
+    image: "./public/Level1/HomeScreen.jpg",
+  },
+  {//111 USED AS EXAMPLE FOR ITEM CHECK
+    story: "DO YOU HAVE THE ITEM ?",
+    options: [{ // need 3 branching themes here
+        text: "--->",
+        nextState: () => pass1, //TODO 4) ADD THE DYNAMIC NEXT STATE BASED ON ITEM PRESENCE
+      },
+    ],
+    image: "./public/Level1/introScene.jpg",
+    music: "./music/captain.mp3",
+  },
+  {//112 USED AS EXAMPLE FOR ITEM CHECK
+    story: "YOU DO!!!!!",
+    options: [
+      {
+        text: "OK",
+        nextState: 0
+      }
+    ], // Empty options, as the game ends here
+    image: "./public/gameOver.jpg",
+  },
+  {//113 USED AS EXAMPLE FOR ITEM CHECK
+    story: "YOU DO NOT",
+    options: [{
+        text: "OK",
+        nextState: 0
+      },
+    ], // Empty options, as the game ends here
+    image: "./public/Level1/menilmontantMetro.jpg",
+  },
 // Add more game states here
 
-{//4
+{//114 not used FREE STATE
   story: "Gabriel décroche, il te dit 'j'ai une jam à l'Atla vers Pigalle, viens stuve! Sinon on se rejoint au Chat noir un peu après!'",
   options: [{
       text: "Aller à la jam à Pigalle",
@@ -126,7 +101,7 @@ const gameStates1 = [{ //0
   image: "./public/Level1/menilmontantMetro.jpg",
 },
 
-{//5
+{//115
   story: "Tu arrives à l'Atla pour la jam, la musique est tellement buen que tu t'enjailles un petit peu trop en buvant du rhum (tu bois 4 verres de rhum et prends 40 d'ivresse directù! po po po! bourré, tu trouves un médiator de gratte vraiment unique par terre, il appartient peut être à quelqu'un, est ce que tu le gardes ou demande autour de toi à quel musicien il appartient ?",
   options: [{
       text: "Je décide de le garder pour moi, il est ebaucoup trop beau!",
@@ -144,7 +119,7 @@ const gameStates1 = [{ //0
   image: "./public/Level1/jamArrival.jpg",
 },
 
-{//6
+{//116
   story: "tu gardes le joli médiator et tu pars pour le Chat noir avec Gabriel, mais il doit faire un détour avant de te rejoindre au Chat noir donc tu y vas tout seul!",
   options: [{
       text: "Ok",
@@ -155,7 +130,7 @@ const gameStates1 = [{ //0
   image: "./public/Level1/guitarPick.jpg",
 },
 
-{//7
+{//117
   story: "'Mec cimer, ce médiator m'a été offert par mon père'. Le guitariste t'invite à boire encore du rhum avec lui pour te remercier (tu te manges 20 d'ivresse en plus)",
   options: [{
       text: "KO",
@@ -169,7 +144,7 @@ const gameStates1 = [{ //0
   image: "./public/Level1/happyNPC.jpg",
 },
 
-{//8
+{//118
   story: "Pierre te propose de le rejoindre voir une pièce de théâtre sur les Grands boulevards ou de le rejoindre un peu plus tard au Chat noir",
   options: [{
       text: "Tu décides d'aller voir la pièce de théâtre avec Pierre",
@@ -187,7 +162,7 @@ const gameStates1 = [{ //0
   image: "./public/Level1/egliseMenilmontant.jpg",
 },
 
-{//9
+{//119
   story: "Le spectateur à ta gauche te dit que tu as fait tomber ton téléphone, ce n'est pas le tien, et personne semble en être le propriétaire autour de toi, est ce que tu le prends ?",
   options: [{
       text: "Je le prends pour voir si je peux retrouver trouver à qui il appartien après la pièce",
@@ -205,7 +180,7 @@ const gameStates1 = [{ //0
   image: "./public/Level1/theatre.jpg",
 },
 
-{//10
+{//120
   story: "Tu ranges le téléphone dans ton sac, tu verras plus tard",
   options: [{
       text: "Ok",
@@ -217,4 +192,4 @@ const gameStates1 = [{ //0
 
 ];
 
-export default gameStates1;
+export default gameStates11;

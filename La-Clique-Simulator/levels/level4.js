@@ -87,7 +87,7 @@ const gameStates4 = [
         {
           text: "Vin",
           onChoose: () => {
-            player.gainDrunkness(10);
+            player.gainDrunkness(15);
             updateCharacterInfo(healthValueElement, drunknessValueElement);
           },
           nextState: 17

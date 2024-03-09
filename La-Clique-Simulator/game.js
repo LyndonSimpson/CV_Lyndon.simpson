@@ -21,8 +21,12 @@ import gameStates7 from './levels/level7.js';
 import gameStates8 from './levels/level8.js';
 import gameStates9 from './levels/level9.js';
 import gameStates10 from './levels/level10.js';
-const gameStates = [...gameStates1, ...gameStates2, ...gameStates3, ...gameStates4, ...gameStates5, ...gameStates6, ...gameStates7, ...gameStates8, ...gameStates9, ...gameStates10];
-
+import gameStates11 from './levels/level11.js';
+import gameStates12 from './levels/level12.js';
+import gameStates13 from './levels/level13.js';
+import gameStates14 from './levels/level14.js';
+import gameStates15 from './levels/level15.js';
+const gameStates = [...gameStates1, ...gameStates2, ...gameStates3, ...gameStates4, ...gameStates5, ...gameStates6, ...gameStates7, ...gameStates8, ...gameStates9, ...gameStates10, ...gameStates11, ...gameStates12, ...gameStates13, ...gameStates14, ...gameStates15];
 
 saveButton.addEventListener("click", saveGame);
 loadButton.addEventListener("click", loadGame);
@@ -45,17 +49,24 @@ function loadGame() {
   }
 }
 
+// Function to dynamically determine the next state based on current conditions
+function getNextState(option) {
+  if (typeof option.nextState === 'function') {
+    return option.nextState(); // If nextState is a function, call it to get the current dynamic value
+  }
+  return option.nextState; // Otherwise, return the nextState directly
+}
+
 function chooseOption(index) {
   const option = gameStates[currentState].options[index];
-  const nextState = option.nextState;
+  const nextState = getNextState(option); // Use the new function here
   currentState = nextState;
 
-  // Check if the player chooses option 1 for the first question
   if (currentState != null) {
     imageSectionElement.classList.add("show-image");
   }
 
-  // Check if there's an onChoose function for the chosen option and call it
+  // Execute any additional actions defined for the chosen option
   if (option.onChoose) {
     option.onChoose();
   }
@@ -164,7 +175,7 @@ function initParticles() {
           nb_sides: 5
         },
         image: {
-          src: "img/github.svg",
+          src: "./public/sunset.jpg", // not showing
           width: 100,
           height: 100
         }
@@ -265,3 +276,4 @@ function initParticles() {
 initParticles();
 
 export { healthValueElement, drunknessValueElement };
+

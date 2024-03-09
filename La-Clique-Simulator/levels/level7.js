@@ -16,7 +16,7 @@ const gameStates7 = [
       },
       {
         text: "Tam",
-        nextState: 63
+        nextState: 103
       },
       {
         text: "Clement",
@@ -46,7 +46,7 @@ const gameStates7 = [
       },
       {
         text: "Tam",
-        nextState: 63
+        nextState: 103
       },
       {
         text: "Clement",
@@ -76,7 +76,7 @@ const gameStates7 = [
       },
       {
         text: "Tam",
-        nextState: 63
+        nextState: 103
       },
       {
         text: "Clement",
@@ -110,7 +110,7 @@ const gameStates7 = [
       },
       {
         text: "Tam",
-        nextState: 63
+        nextState: 103
       },
       {
         text: "Clement",
@@ -140,7 +140,7 @@ const gameStates7 = [
       },
       {
         text: "Tam",
-        nextState: 63
+        nextState: 103
       },
       {
         text: "Lyndon",
@@ -200,7 +200,7 @@ const gameStates7 = [
       },
       {
         text: "Tam",
-        nextState: 63
+        nextState: 103
       },
       {
         text: "Clement",

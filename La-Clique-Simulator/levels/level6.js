@@ -120,7 +120,7 @@ const gameStates6 = [
       },
       {
         text: "Tam",
-        nextState: 63
+        nextState: 103
       },
       {
         text: "Clement",

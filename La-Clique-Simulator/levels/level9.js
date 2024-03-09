@@ -1,19 +1,6 @@
 import { addItem, updateInventory } from '../inventory.js';
 import { player, updateCharacterInfo } from '../character.js';
 import { healthValueElement, drunknessValueElement } from '../game.js';
-const roulette = () => {
-  const number = Math.floor(Math.random() * 6);
-  
-  const bullet = 3;
-  
-  if (number == bullet) {
-      const s = 2;
-      return s;
-  } else {
-      const s = 1;
-      return s;
-  }
-  }
 
 
 const gameStates9 = [
@@ -33,7 +20,7 @@ const gameStates9 = [
     },
   
     { //89 SAVED AGAINST HACKS OF PIGEON STATE
-      story: "Tu as réuss! 'Voilà ! Le Contre-PIGEONNet est en place. Grâce à toi, nous avons une chance de repousser cette attaque. Tiens, prends ce Disque Dur Crypté. Il contient des informations cruciales que le PIGEON ne doit pas obtenir'",
+      story: "Tu as réussi! 'Voilà ! Le Contre-PIGEONNet est en place. Grâce à toi, nous avons une chance de repousser cette attaque. Tiens, prends ce Disque Dur Crypté. Il contient des informations cruciales que le PIGEON ne doit pas obtenir'",
       options: [{
           text: "Accepter le disque-dur et aller au Chat noir",
           onChoose: () => {
@@ -51,7 +38,7 @@ const gameStates9 = [
     },
   
     { //90 Namyria quest here:
-      story: "Le chien est un petit French Bulldog, à votre grande surprise à tous les trois il se met à parler : 'Bonjour hoomains, je m'appelle Nymiria! j'ai appeler attiré votre attention car j'ai besoin de votre aide... s'il vous plaît, c'est d'un importance capitale!!!",
+      story: "Le chien est un petit French Bulldog, à votre grande surprise à tous les trois elle se met à parler : 'Bonjour hoomains, je m'appelle Nymiria! j'ai appeler attiré votre attention car j'ai besoin de votre aide... s'il vous plaît, c'est d'un importance capitale!!!",
       options: [{
       text: "'...de quoi as tu besoin?'",
       nextState: 91
@@ -65,7 +52,7 @@ const gameStates9 = [
     },
   
     { //91 Nymiria state 2
-      story: "Je m'appelle Nymiria! Il faut absolument que je récupère mes snacks, ils me ramèneront à mes parents grâce à leur odeur!",
+      story: "Il faut absolument que je récupère mes snacks, ils me ramèneront à mes parents grâce à leur odeur!",
       options: [{
           text: "Mmmh... Ok, comment est ce qu'on peut les trouver ?",
           nextState: 92
@@ -119,7 +106,7 @@ const gameStates9 = [
           nextState: 97
         },
       ],
-      image:"./public/Level6/frenchie1.png",
+      image:"./public/Level7/frenchie4.png",
     },
   
     { //94
@@ -157,7 +144,7 @@ const gameStates9 = [
           nextState: 101
         },
       ],
-      image: "./public/Level7/frenchie3.png",
+      image: "./public/Level7/frenchie2.jpg",
     },
   
     { //97
@@ -167,7 +154,7 @@ const gameStates9 = [
           nextState: 96
         },
       ],
-      image: "./public/Level4/buttes2.jpg",
+      image: "./public/Level7/frenchie4.png",
     },
   
     { //98
@@ -175,7 +162,7 @@ const gameStates9 = [
       options: [
         {
           text: "Tarte me up",
-          nextState: 103
+          nextState: 109
         },
         {
           text: "Tarte-up nation",

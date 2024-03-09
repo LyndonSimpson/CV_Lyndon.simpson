@@ -75,45 +75,41 @@ const gameStates3 = [
     },
   
     { //27
-      story: "Soirée boîte de nuit CONNECTED",
+      story: "Oui oui, on vous connaît la clique!... Une connerie et ça dégage direct ce soir, je suis pas d'humeur!",
       options: [{
-          text: "Oui",
-          nextState: 1
+          text: "ça va, ça va, on va être sages :)",
+          nextState: 28
         },
         {
-          text: "Non",
-          nextState: 2
+          text: "NOUS?! jamais m'enfin!!",
+          nextState: 28
         },
       ],
-      image: "./public/Level2/nightClub.jpg",
+      image: "./public/Level1/Bar.png",
     },
   
     { //28
-      story: "Soirée appart CONNECTED",
+      story: "Mouais, je vous ai a l'oeil toi et tes potos. un jour les portes vous seront fermées",
       options: [{
-          text: "Oui",
-          nextState: 1
+          text: "Ok",
+          nextState: 29
         },
         {
-          text: "Non",
-          nextState: 2
+          text: "Tu sais quoi... OSEF - dire à la clique qu'on se rejoint en fait tous au petit garage!",
+          nextState: 121
         },
       ],
-      image: "./public/Level2/appartGame.jpg",
+      image: "./public/Level1/ChatInterieur.png",
     },
   
     { //29
-      story: "Concert jazz manouche CONNECTED",
+      story: "La clique arrive au chat noir! La soirée peut commencer. Tout le monde se met à boire et rire à gorge déployée! Les festivités battent leur plein!",
       options: [{
-          text: "Oui",
-          nextState: 1
-        },
-        {
-          text: "Non",
-          nextState: 2
+          text: "Wouhouuu!",
+          nextState: 132
         },
       ],
-      image: "./public/Level2/jazzManouche.jpg",
+      image: "./public/Level1/ChatInterieur.png",
     },
   
     { //30

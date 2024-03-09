@@ -6,6 +6,10 @@ class Character {
     this.health = health;
     this.drunkness = drunkness;
   }
+
+    getDrunkness() {
+      return this.drunkness;
+    }
   
     gainHealth(amount) {
       this.health += amount;
@@ -33,7 +37,7 @@ class Character {
     }
   }
   
-  const player = new Character(100, 0);
+  const player = new Character(100, 0); 
 
   function updateCharacterStats() {
     const healthPercentage = (player.health / player.maxHealth) * 100;

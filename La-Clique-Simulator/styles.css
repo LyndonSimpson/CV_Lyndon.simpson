@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("./public/rooftops.png");
+    background-image: url("./public/rooftops3.png");
     overflow: none;
     color: var(--neon-color); /* Neon green color */
     font-family: "Press Start 2P", monospace;
@@ -421,7 +421,7 @@ button:hover {
   }
 }
 
-/* Apply the glowing effect to elements with green borders */
+/* Apply the glowing effect to elements with green borders -- */
 #image-section,
 .game-section {
   animation: glow 1.5s infinite;

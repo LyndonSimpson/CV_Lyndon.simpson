@@ -83,7 +83,7 @@ const gameStates2 = [
   },
 
   { //16
-    story: "BEER STATE - you gain 10 drunkness",
+    story: "Tu bois une bière, tu prends 10 points d'ivresse",
     options: [{
         text: "Ok",
         nextState: 19
@@ -105,7 +105,7 @@ const gameStates2 = [
   },
 
   { //17
-    story: "Wine State - you gain 10 drunkness",
+    story: "Tu bois un verre de vin, tu prends 15 points d'ivresse",
     options: [{
         text: "Ok",
         nextState: 19
@@ -113,7 +113,7 @@ const gameStates2 = [
       {
         text: "Boire un aute verre de vin",
         onChoose: () => {
-          player.gainDrunkness(10);
+          player.gainDrunkness(15);
           updateCharacterInfo(healthValueElement, drunknessValueElement);
         },
         nextState: 17
@@ -127,7 +127,7 @@ const gameStates2 = [
   },
 
   { //18
-    story: "LIQOR STATE - you gain 20 drunkness",
+    story: "Tu bois un verre de calva, tu prends 20 points d'ivresse",
     options: [{
         text: "Ok",
         nextState: 19
@@ -149,18 +149,18 @@ const gameStates2 = [
   },
 
   { //19
-    story: "Tu es posé au bar du Chat noir en train d'attendre la Clique. PROPOSITION PERSONNAGE MYSTéRIEUX",
+    story: "Tu es posé au bar du Chat noir en train d'attendre la Clique. Le barman te demande ce que la clique va faire ce soir ? (il espère ne pas à avoir à vous virrer du Chat noir encore une fois...)",
     options: [{
-        text: "nightclub party",
+        text: "On va être sages ce soir :)",
         nextState: 27
       },
       {
-        text: "soirée appart",
-        nextState: 28
+        text: "Boarf, tu vas pas commancer, on a cassé QUE 5 verres la dernière fois!",
+        nextState: 27
       },
       {
-        text: "concert jazz manouche",
-        nextState: 29
+        text: "... (sourire diabolique :)) )",
+        nextState: 27
       },
     ],
     image: "./public/Level1/ChatInterieur.png",
