@@ -2,6 +2,13 @@ import { addItem, updateInventory, getInventory } from '../inventory.js';
 import { player, updateCharacterInfo } from '../character.js';
 import { healthValueElement, drunknessValueElement } from '../game.js';
 
+
+// this whole level is an empty slate that we can repurpose
+// later to save memory usage. - see how we can manage a better memory usage ? 
+// Maybe write a script that can transfer all our existing states (levels) 
+// and have that automated with a python script for example. Into a Json file 
+// as proposed by Zed. 
+
 //TODO : 4 todos below that explain and show each step of adding a item check pass (or fail) depending on item presence
 
 //TODO 1) Will have to use pass2 for next item check!

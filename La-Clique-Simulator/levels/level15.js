@@ -18,6 +18,48 @@ const gameStates15 = [
       image: "./public/Level3/pigeon.png",
     },
 
+    { //162 
+      story: "EMPTY",
+      options: [{
+          text: "option 1",
+          nextState: 1
+        },
+        {
+          text: "option 2",
+          nextState: 1
+        },
+      ],
+      image: "./public/Level3/pigeon.png",
+    },
+
+    { //163
+      story: "EMPTY state again here",
+      options: [{
+          text: "option 1",
+          nextState: 1
+        },
+        {
+          text: "option 2",
+          nextState: 1
+        },
+      ],
+      image: "./public/Level3/pigeon.png",
+    },
+
+    { //164
+      story: "EMPTY state 3",
+      options: [{
+          text: "option 1",
+          nextState: 1
+        },
+        {
+          text: "option 2",
+          nextState: 1
+        },
+      ],
+      image: "./public/Level3/pigeon.png",
+    },
+
   ];
   
   export default gameStates15;

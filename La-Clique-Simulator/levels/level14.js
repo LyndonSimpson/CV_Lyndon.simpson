@@ -266,12 +266,12 @@ const gameStates14 = [
           nextState: 1
         },
         {
-          text: "soirée boe de nuit (batofar)",
+          text: "soirée boite de nuit (batofar)",
           nextState: 1
         },
         {
-          text: "JOKER",
-          nextState: 1
+          text: "COURABALOU et puis ensuite on avisera!",
+          nextState: 161
         },
       ],
       image: "./public/items/phone.png",

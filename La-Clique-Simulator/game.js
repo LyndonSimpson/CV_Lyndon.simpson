@@ -129,6 +129,11 @@ function updateStory() {
     updateMusic(gameState.music);
   }
 
+  // Once the initial story and game state are set, hide the loading screen.
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    loadingScreen.style.display = 'none';
+  }
 }
 
 // Get the modal
@@ -149,7 +154,23 @@ window.onclick = function(event) {
   }
 }
 
-updateStory();
+// Use setTimeout to simulate a loading delay
+// to revert to no loading screen, just replace all this function with a simple
+// other function : 'updateStory();'
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Simulate loading time and hide the loading screen after 3 seconds
+  setTimeout(() => {
+      const loadingScreen = document.getElementById('loading-screen');
+      if (loadingScreen) {
+          loadingScreen.style.display = 'none';
+      }
+      
+      // Since the game is now ready, update the story and other initial game settings
+      updateStory(); // Ensure this is inside the setTimeout so it executes after the loading screen hides
+
+      // Any other actions you want to delay until after the loading screen is hidden
+  }, 2500); // Delay of 3000 milliseconds
+});
 
 // Add the initParticles function
 function initParticles() {
