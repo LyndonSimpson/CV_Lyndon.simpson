@@ -9,6 +9,7 @@ body {
   font-family: cursor, monospace;
   overflow-x: hidden;
 }
+
 ::selection {
   color: #0D0D0D;
   background-color: #33FF33;
@@ -120,4 +121,17 @@ a:hover {
 }
 a:focus {
   outline: 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px; /* Smaller font for tablets and mobile phones */
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 10px; /* Even smaller font for very small devices */
+  }
 }
