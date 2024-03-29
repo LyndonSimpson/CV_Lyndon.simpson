@@ -36,10 +36,10 @@ whoami = [
 
 social = [
   "<br>",
-  'portfolio        <a href="' + portfolio + '" target="_blank">portfolio/cleanVersion' + "</a>",
-  'resume        <a href="' + resume + '" target="_blank">dynamic/resume' + '</a>',
+  'portfolio      <a href="' + portfolio + '" target="_blank">portfolio/cleanVersion' + "</a>",
+  'resume         <a href="' + resume + '" target="_blank">dynamic/resume' + '</a>',
   'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/LyndonSimpson' + "</a>",
-  'game      <a href="' + game + '" target="_blank">games/RPG-Alpha-build' + '</a>',
+  'game           <a href="' + game + '" target="_blank">games/RPG-Alpha-build' + '</a>',
   'github         <a href="' + github + '" target="_blank">github/LyndonSimpson' + "</a>",
   "<br>"
 ];
