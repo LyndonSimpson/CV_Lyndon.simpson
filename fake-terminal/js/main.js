@@ -79,6 +79,27 @@ function enterKey(e) {
 
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
+    case "yoda":
+      loopLines(yoda, "color2 margin", 80);
+      break;
+    case "keyboard":
+      loopLines(keyboard, "color2 margin", 80);
+      break;
+    case "hacker":
+      loopLines(hacker, "color2 margin", 80);
+      break;
+    case "shrek":
+      loopLines(shrek, "color2 margin", 80);
+      break;
+    case "console":
+      loopLines(console, "color2 margin", 80);
+      break;
+    case "raccoon":
+      loopLines(raccoon, "color2 margin", 80);
+      break;
+    case "art":
+      loopLines(art, "color2 margin", 80);
+      break;
     case "help":
       loopLines(help, "color2 margin", 80);
       break;
@@ -89,6 +110,9 @@ function commander(cmd) {
       loopLines(whoami, "color2 margin", 80);
       break;
     case "game":
+      loopLines(gameInfo, "color2 margin", 80);
+      break;
+    case "run game":
       addLine("Opening Game...", "color2", 80);
       newTab(game);
       break;
