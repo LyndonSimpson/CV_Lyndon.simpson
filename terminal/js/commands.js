@@ -6,7 +6,7 @@ var game = "https://lyndonsimpson.github.io/CV_Lyndon.simpson/La-Clique-Simulato
 var github = "https://github.com/LyndonSimpson/";
 var email = 'mailto:lyndon.simpson@gmail.com';
 
-whois = [ 
+whois = [
     "<br>",
     "Welcome to my portfolio! I'm a junior full-stack web and mobile developer,",
     "with a particular focus on back-end development. I earned a professional title",
@@ -36,10 +36,10 @@ whoami = [
 
 social = [
   "<br>",
-  'portfolio        <a href="' + portfolio + '" target="_blank">portfolio/cleanVersion' + "</a>",
-  'resume        <a href="' + resume + '" target="_blank">dynamic/resume' + '</a>',
+  'portfolio      <a href="' + portfolio + '" target="_blank">portfolio/cleanVersion' + "</a>",
+  'resume         <a href="' + resume + '" target="_blank">dynamic/resume' + '</a>',
   'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/LyndonSimpson' + "</a>",
-  'game      <a href="' + game + '" target="_blank">games/RPG-Alpha-build' + '</a>',
+  'game           <a href="' + game + '" target="_blank">games/RPG-Alpha-build' + '</a>',
   'github         <a href="' + github + '" target="_blank">github/LyndonSimpson' + "</a>",
   "<br>"
 ];
