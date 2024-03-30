@@ -6,7 +6,7 @@ var game = "https://lyndonsimpson.github.io/CV_Lyndon.simpson/La-Clique-Simulato
 var github = "https://github.com/LyndonSimpson/";
 var email = 'mailto:lyndon.simpson@gmail.com';
 
-whois = [
+about = [
     "<br>",
     "Welcome to my portfolio! I'm a junior full-stack web and mobile developer,",
     "with a particular focus on back-end development. I earned a professional title",
@@ -14,6 +14,7 @@ whois = [
     "training with O'clock school. My end-of-training project, for which I developed",
     "the entire back-end, was a website with secure authentication, database, and",
     "an internal messaging system.",
+    "<br>",
     "I've developed a keen interest in video game development, exploring various",
     "frameworks and tools. My experience with Three.js and Blender has deepened my",
     "understanding of 3D modeling and animation. I've also started working with the",
@@ -30,11 +31,11 @@ whois = [
 
 whoami = [
   "<br>",
-  "Only you can answer that question, but i suspect you are curious.",
+  "Only you can answer that question, but I suspect you are curious.",
   "<br>"
 ];
 
-social = [
+socials = [
   "<br>",
   "*",
   "|_",
@@ -42,23 +43,23 @@ social = [
   "|#|",
   "'-'",
   "<br>",
-  'portfolio      <a href="' + portfolio + '" target="_blank">portfolio/cleanVersion' + "</a>",
-  'resume         <a href="' + resume + '" target="_blank">dynamic/resume' + '</a>',
-  'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/LyndonSimpson' + "</a>",
-  'game           <a href="' + game + '" target="_blank">games/RPG-Alpha-build' + '</a>',
-  'github         <a href="' + github + '" target="_blank">github/LyndonSimpson' + "</a>",
+  '<span class="command">portfolio</span>      <span><</span><u><a href="' + portfolio + '" target="_blank">portfolio/cleanVersion' + '</a></u><span>></span>',
+  '<span class="command">resume</span>         <span><</span><u><a href="' + resume + '" target="_blank">dynamic/resume' + '</a></u><span>></span>',
+  '<span class="command">linkedin</span>       <span><</span><u><a href="' + linkedin + '" target="_blank">linkedin/LyndonSimpson' + "</a></u><span>></span>",
+  '<span class="command">game</span>           <span><</span><u><a href="' + game + '" target="_blank">games/RPG-Alpha-build' + '</a></u><span>></span>',
+  '<span class="command">github</span>         <span><</span><u><a href="' + github + '" target="_blank">github/LyndonSimpson' + "</a></u><span>></span>",
   "<br>"
 ];
 
 secret = [
   "<br>",
-  '<span class="command">sudo</span>           Only use if you\'re admin',
+  '<span class="command">sudo admin login</span>           use command to login as admin',
   "<br>"
 ];
 
 projects = [
   "<br>",
-  'Visit my github to see my publc projects : <a href="' + github + '" target="_blank">github/LyndonSimpson' + "</a>",
+  'Visit my github to see my publc projects : <span><</span><u><a href="' + github + '" target="_blank">github/LyndonSimpson' + "</a></u><span>></span>",
   "<br>",
   ",---,---,---,---,---,---,---,---,---,---,---,---,---,-------,",
 "|1/2| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | + | ' | <-    |",
@@ -80,36 +81,48 @@ help = [
   "     /'.-c",
   "     |  /T",
   "    _)_/LI",
-  '<span class="command">whois</span>          Who is Lyndon?',
+  '<span class="command">about</span>          Who is Lyndon?',
+  '<span class="command">themes</span>         Get list of different commands to switch themes',
   '<span class="command">whoami</span>         Who are you?',
   '<span class="command">game</span>           Alpha build of a text RPG I build for my friends',
-  '<span class="command">social</span>         Display social networks',
-  '<span class="command">secret</span>         Find the password',
+  '<span class="command">socials</span>        Display social networks',
+  '<span class="command">login</span>          Login as admin - using password',
   '<span class="command">projects</span>       View coding projects',
-  '<span class="command">history</span>        View command history',
-  '<span class="command">help</span>           You obviously already know what this does',
-  '<span class="command">email</span>          Do not email me',
+  '<span class="command">history</span>        Displays the command log',
+  '<span class="command">help</span>           No need to explain if you\'re here',
+  '<span class="command">email</span>          Feel free to reach out',
   '<span class="command">clear</span>          Clear terminal',
-  '<span class="command">banner</span>         Display the header',
+  '<span class="command">banner</span>         Displays the top banner',
   '<span class="command">art</span>            ASCII art archives',
+  "<br>",
+];
+
+themes = [
+  "<br>",
+  '<span class="command">run retro theme</span>          Retro inspired terminal',
+  '<span class="command">run matrix theme</span>         Green',
+  '<span class="command">run classic theme</span>        Default theme',
   "<br>",
 ];
 
 banner = [
   '<span class="index">Lyndon Simpson - Not A Corporation. All rights reserved.</span>',
-  ".____                       .___                 _________",
-"|    |    ___.__. ____    __| _/____   ____     / ======= \\",
-"|    |   <   |  |/    \\  / __ |/  _ \\ /    \\   / __________\\",
-"|    |___ \\___  |   |  \\/ /_/ (  <_> )   |  \\ | ___________ |",
-"|_______ \\/ ____|___|  /\\____ |\\____/|___|  / | | -       | |",
-"        \\/\\/         \\/      \\/           \\/  | |  @2024  | |",
-"                                              | |_________| |_____",
-"                                              \\=____________/     )",
-"                                              / \"\"\"\"\"\"\"\"\"\"\" \\",
-"                                             / ::::::::::::: \\",
-"                                            (_________________)",
+  "<span class=\"color3\">.____                       .___                 _________</span>",
+"<span class=\"color3\">|    |    ___.__. ____    __| _/____   ____     / ======= \\</span>",
+"<span class=\"color3\">|    |   <   |  |/    \\  / __ |/  _ \\ /    \\   / __________\\</span>",
+"<span class=\"color3\">|    |___ \\___  |   |  \\/ /_/ (  <_> )   |  \\ | ___________ |</span>",
+"<span class=\"color3\">|_______ \\/ ____|___|  /\\____ |\\____/|___|  / | | -       | |</span>",
+"<span class=\"color3\">        \\/\\/         \\/      \\/           \\/  | |  @2024  | |</span>",
+"<span class=\"color3\">                                              | |_________| |_____</span>",
+"<span class=\"color3\">                                              \\=____________/     )</span>",
+"<span class=\"color3\">                                              / \"\"\"\"\"\"\"\"\"\"\" \\</span>",
+"<span class=\"color3\">                                             / ::::::::::::: \\</span>",
+"<span class=\"color3\">                                            (_________________)</span>",
   '<span class="color2">Welcome to my interactive web terminal.</span>',
+  'classic portfolio link:     <span><</span><u><a href="' + portfolio + '" target="_blank">portfolio/cleanVersion' + '</a></u><span>></span>',
+  "<br>",
   "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'help'</span><span class=\"color2\">.</span>",
+  "<br>",
 ];
 
 art = [
@@ -159,7 +172,7 @@ gameInfo = [
   "    `\"\"\"\"\"\"\"`",
   "This game is my first RPG text based game",
   "it is not finished, it is a work in progress!",
-  "Launch game with 'run game' command"
+  "Launch game with '<span class=\"command\">run game</span>' command"
 ]
 
 shrek = [

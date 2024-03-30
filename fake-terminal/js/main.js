@@ -77,8 +77,30 @@ function enterKey(e) {
   }
 }
 
+function changeTheme(newThemeFilename) {
+  var themeLink = document.getElementById("theme-stylesheet");
+  if(themeLink) {
+      themeLink.href = './css/' + newThemeFilename;
+  }
+}
+
 function commander(cmd) {
-  switch (cmd.toLowerCase()) {
+    switch (cmd.toLowerCase()) {
+    case "themes":
+      loopLines(themes, "color2 margin", 80);
+      break;
+    case "run retro theme":
+      changeTheme("retro-theme.css");
+      addLine("Switched to Retro Theme", "color2", 80);
+      break;
+    case "run matrix theme":
+      changeTheme("matrix-theme.css");
+      addLine("Switched to Matrix Theme", "color2", 80);
+      break;
+    case "run classic theme":
+      changeTheme("classic-theme.css");
+      addLine("Switched to Classic Theme", "color2", 80);
+      break;
     case "yoda":
       loopLines(yoda, "color2 margin", 80);
       break;
@@ -103,8 +125,8 @@ function commander(cmd) {
     case "help":
       loopLines(help, "color2 margin", 80);
       break;
-    case "whois":
-      loopLines(whois, "color2 margin", 80);
+    case "about":
+      loopLines(about, "color2 margin", 80);
       break;
     case "whoami":
       loopLines(whoami, "color2 margin", 80);
@@ -116,16 +138,16 @@ function commander(cmd) {
       addLine("Opening Game...", "color2", 80);
       newTab(game);
       break;
-    case "sudo":
-      addLine("Oh no, you're not admin...", "color2", 80);
+    case "sudo admin login":
+      addLine("System detecting a hacker - redirecting to punishment", "color2", 80);
       setTimeout(function() {
         window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
       }, 1000); 
       break;
-    case "social":
-      loopLines(social, "color2 margin", 80);
+    case "socials":
+      loopLines(socials, "color2 margin", 80);
       break;
-    case "secret":
+    case "login":
       liner.classList.add("password");
       pw = true;
       break;
