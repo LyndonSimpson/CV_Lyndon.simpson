@@ -102,6 +102,7 @@ themes = [
   '<span class="command">run retro theme</span>          Retro inspired terminal',
   '<span class="command">run matrix theme</span>         Green',
   '<span class="command">run classic theme</span>        Default theme',
+  '<span class="command">run synthwave theme</span>      Synthwave theme',
   "<br>",
 ];
 

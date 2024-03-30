@@ -93,6 +93,10 @@ function commander(cmd) {
       changeTheme("retro-theme.css");
       addLine("Switched to Retro Theme", "color2", 80);
       break;
+    case "run synthwave theme":
+      changeTheme("synthwave-theme.css");
+      addLine("Switched to Synthwave Theme", "color2", 80);
+      break;
     case "run matrix theme":
       changeTheme("matrix-theme.css");
       addLine("Switched to Matrix Theme", "color2", 80);
