@@ -4,34 +4,37 @@ body {
     min-height: 99%;
     width: 100%;
     min-width: 550px;
-    color: #FFF; /* Bright green, similar to Linux terminal text */
-    background: #031e11; /* Darker background for the terminal */
-    font-family: cursor, monospace;
+    color: #ff7597; /* Neon pink, softer than vibrant for text readability */
+    background: #33032F; /* Dark, almost black background, simulating urban decay */
+    font-family: 'cursor', monospace;
     overflow-x: hidden;
-    text-shadow: 0 0.2rem 1rem #0c7b46;
-  }
-  
-  ::selection {
-    color: #0D0D0D;
-    background-color: #33FF33;
-  }
-  ::-moz-selection {
-    color: #0D0D0D;
-    background-color: #33FF33;
-  }
-  textarea {
+    text-shadow: 0 0.3rem 1.5rem #00ffd5; /* Bright cyberpunk turquoise for a neon glow effect */
+}
+
+::selection {
+    color: #121212;
+    background-color: #ff7597; /* Soft neon pink text selection for stark contrast */
+}
+::-moz-selection {
+    color: #121212;
+    background-color: #ff7597;
+}
+
+textarea {
     left: -1000px;
     position: absolute;
-  }
-  b {
+}
+
+b {
     font-weight: bold;
     text-decoration: underline;
-  }
-  /* Cursor Start */
-  .cursor {
+}
+
+/* Cursor Start */
+.cursor {
     font-size: 12px;
-    color: #33FF33; /* Cursor color */
-    background-color: #33FF33; /* Cursor background color */
+    color: #00ffd5; /* Turquoise cursor color for a neon effect */
+    background-color: #00ffd5; /* Matching cursor background */
     position: relative;
     opacity: 1;
     height: 1.5em;
@@ -43,41 +46,49 @@ body {
     display: inline-block;
     text-decoration: blink;
     animation: blinker 1s linear infinite;
-  }
-  @keyframes blinker {
+}
+
+@keyframes blinker {
     50% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  #command {
+}
+
+#command {
     cursor: text;
     height: 50px;
-    color: #FFF; /* Command line color */
-  }
-  #liner {
+    color: #ff7597; /* Command line color updated to soft neon pink */
+}
+
+#liner {
     line-height: 1.3em;
     margin-top: -2px;
     animation: show 0.5s ease forwards;
     animation-delay: 1.2s;
     opacity: 0;
-  }
-  #liner::before {
-    color: #FFF; /* Prompt color */
+}
+
+#liner::before {
+    color: #ff7597; /* Prompt color changed to vibrant neon pink */
     content: "visitor@portfolio:~$";
-  }
-  #liner.password::before {
+}
+
+#liner.password::before {
     content: "Password:";
-  }
-  @keyframes show {
+}
+
+@keyframes show {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  /* Cursor End */
-  p {
+}
+
+/* Cursor End */
+
+p {
     display: block;
     line-height: 1.3em;
     margin: 0;
@@ -86,64 +97,77 @@ body {
     margin: 0;
     letter-spacing: 0.05em;
     animation: typing 0.5s steps(30, end);
-  }
-  .no-animation {
+}
+
+.no-animation {
     animation: typing 0 steps(30, end);
-  }
-  .margin {
+}
+
+.margin {
     margin-left: 20px;
-  }
-  .index {
-    color: #DCDCCC;
-  }
-  .color2 {
-    color: #FFF;
-  }
-  .color3 {
-    color: #FFF;
-  }
-  .command {
-    color: #FFF;
-    text-shadow: 0 0 5px #FFF; /* Bright green with glow for commands */
-  }
-  .error {
-    color: #B89076;
-  }
-  .white {
+}
+
+.index {
+    color: #00ffd5; /* Bright cyberpunk turquoise for indexes and highlights */
+}
+
+.color2 {
+    color: #ffbe0b; /* Bright neon yellow for secondary information */
+}
+
+.color3 {
+    color: #fff; /* White remains for contrast and readability */
+}
+
+.command {
     color: #fff;
-  }
-  .inherit,
-  a {
-    color: #3377FF;
-  }
-  a {
+    text-shadow: 0 0 5px #ff7597; /* Soft neon pink glow for commands */
+}
+
+.error {
+    color: #ff3864; /* Neon red for errors, signaling danger */
+}
+
+.white {
+    color: #fff; /* Keeping white for clear readability */
+}
+
+.inherit,
+a {
+    color: #3bf4fb; /* Bright cyberpunk blue for links, simulating holographic displays */
+}
+
+a {
     text-decoration: inherit;
-  }
-  a:hover {
-    background: #33FF33;
-    color: #0D0D0D;
-  }
-  a:focus {
+}
+
+a:hover {
+    background: #ff7597;
+    color: #121212; /* Hover effect with neon pink and dark background */
+}
+
+a:focus {
     outline: 0;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     body {
-      font-size: 12px; /* Smaller font for tablets and mobile phones */
-      padding: 10px; /* Adjust padding */
+        font-size: 12px; /* Smaller font for tablets and mobile phones */
+        padding: 10px; /* Adjust padding */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     body {
-      font-size: 10px; /* Even smaller font for very small devices */
+        font-size: 10px; /* Even smaller font for very small devices */
     }
-  }
+}
+
+
+
+/* added styles from codepen */
   
-  
-  /* added styles from codepen */
-  
-  .scanlines {
+.scanlines {
     top: 0;
     left: 0;
     height: 100%;
@@ -183,7 +207,7 @@ body {
   #terminal:focus-within ~ .scanlines:before {
     content: '';
     display: block;
-    
+    animation: vline calc(var(--time, 2) * 1s) linear infinite;
   }
   /*
   * MS Edge don't support focus-within and css vars

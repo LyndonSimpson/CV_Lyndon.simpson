@@ -93,6 +93,10 @@ function commander(cmd) {
       changeTheme("solarized-theme.css");
       addLine("Switched to Solarized Theme", "color2", 80);
       break;
+    case "run cyber theme":
+      changeTheme("cyber-theme.css");
+      addLine("Switched to Cyber Theme", "color2", 80);
+      break;
     case "run retro theme":
       changeTheme("retro-theme.css");
       addLine("Switched to Retro Theme", "color2", 80);
