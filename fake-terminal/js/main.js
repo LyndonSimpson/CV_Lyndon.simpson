@@ -97,6 +97,10 @@ function commander(cmd) {
       changeTheme("jungle-theme.css");
       addLine("Switched to Neon Jungle Theme", "color2", 80);
       break;
+    case "run winter theme":
+      changeTheme("winter-theme.css");
+      addLine("Brace yourselves, winter is coming...", "color2", 80);
+      break;
     case "run cyber theme":
       changeTheme("cyber-theme.css");
       addLine("Switched to Cyber Theme", "color2", 80);

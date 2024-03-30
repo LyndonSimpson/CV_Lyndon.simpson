@@ -106,6 +106,7 @@ themes = [
   '<span class="command">run solarized theme</span>      Solarized theme',
   '<span class="command">run cyber theme</span>          Cyberpunk theme',
   '<span class="command">run jungle theme</span>         Neon Jungle theme',
+  '<span class="command">run winter theme</span>         Winter is coming',
   "<br>",
 ];
 
