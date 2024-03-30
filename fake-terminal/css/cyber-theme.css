@@ -207,20 +207,7 @@ a:focus {
   #terminal:focus-within ~ .scanlines:before {
     content: '';
     display: block;
-    animation: vline calc(var(--time, 2) * 1s) linear infinite;
-  }
-  /*
-  * MS Edge don't support focus-within and css vars
-  * inside pseudo selector
-  */
-  @supports (-ms-ime-align:auto) {
-    .scanlines:before {
-        content: '';
-        animation: vline 3s linear infinite;
-    }
-  }
-  @keyframes vline {
-  to { transform: translate(0, 100vh)}
+    
   }
   
   

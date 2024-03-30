@@ -185,19 +185,6 @@ body {
     display: block;
     
   }
-  /*
-  * MS Edge don't support focus-within and css vars
-  * inside pseudo selector
-  */
-  @supports (-ms-ime-align:auto) {
-    .scanlines:before {
-        content: '';
-        animation: vline 3s linear infinite;
-    }
-  }
-  @keyframes vline {
-  to { transform: translate(0, 100vh)}
-  }
   
   
   /* noise */
