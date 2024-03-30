@@ -92,8 +92,8 @@ body {
   .margin {
     margin-left: 20px;
   }
-  @index {
-    color: #DCDCCC;
+  .index {
+    color: #33FF33;
   }
   .color2 {
     color: #B89076;
