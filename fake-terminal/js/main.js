@@ -89,6 +89,10 @@ function commander(cmd) {
     case "themes":
       loopLines(themes, "color2 margin", 80);
       break;
+    case "run solarized theme":
+      changeTheme("solarized-theme.css");
+      addLine("Switched to Solarized Theme", "color2", 80);
+      break;
     case "run retro theme":
       changeTheme("retro-theme.css");
       addLine("Switched to Retro Theme", "color2", 80);
