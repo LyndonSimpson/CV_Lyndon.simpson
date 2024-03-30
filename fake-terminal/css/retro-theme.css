@@ -185,27 +185,3 @@ body {
     display: block;
     
   }
-  
-  
-  /* noise */
-  
-  .noise {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 2000;
-    opacity: 0.05;
-    pointer-events: none;
-    background: 
-        repeating-radial-gradient(#000 0 0.0001%,#fff 0 0.0002%) 50% 0/2500px 2500px,
-        repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%) 50% 50%/2500px 2500px;
-    background-blend-mode: difference;
-    animation: shift .2s infinite alternate;
-  }
-  @keyframes shift {
-    100% {
-        background-position: 50% 0, 50% 60%;
-    }
-  }
