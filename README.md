@@ -1,4 +1,4 @@
-# My Resume
+# My Resume --
 
 This repository contains my professional resume. The purpose of this repository is to maintain and showcase my skills, experiences, and achievements.
 
